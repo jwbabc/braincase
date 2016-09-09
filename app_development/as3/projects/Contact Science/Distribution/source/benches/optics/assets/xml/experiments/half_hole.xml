@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Advanced: Half hole</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Try blocking part of the lens in An Image of a Light Bulb by placing one of the black plastic shapes close to the lens.  Each one will make the image dimmer. But can you find an advantage to one of these experimental setups?<br><br>Hint: look for image brightness and clarity.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

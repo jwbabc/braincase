@@ -1,0 +1,104 @@
+<?php
+// $Id$
+
+function pr($var)
+{
+	echo "<pre>";
+	print_r($var);
+	echo "</pre>";
+}
+
+function example_help($section)
+{
+  switch ($section)
+  {
+    case 'admin/modules#description':
+    return t('Allows the use of the quiz show admin tool');
+  }
+};
+
+function example_perm()
+{
+  return array
+  (
+  'View question information',
+  'Add, delete, edit, question sets',
+  );
+};
+
+
+function example_menu($may_cache) {
+  $items = array();
+  if (!$may_cache && module_exists('qadmin')) {
+  	// Question Set/Question Browsing Pages - Menu Items
+  	$items[] = array
+  	(
+  		'path' => 'qset_admin',
+  		'title' => t('qAdmin'),
+  		'callback' => 'qset_view',
+  		'access' => user_access('View question information'),
+  		'weight' => '0',
+  		'type' => MENU_NORMAL_ITEM,
+  	);
+  	$items[] = array
+  	(
+  		'path' => 'qset_add',
+  		'title' => t('Add a question set'),
+  		'callback' => 'qset_add',
+  		'access' => user_access('Add, delete, edit, question sets'),
+  		'weight' => '1',
+  		'type' => MENU_NORMAL_ITEM,
+  	);
+  	$items[] = array
+  	(
+  		'path' => 'qset_edit',
+  		'title' => t('Edit question set'),
+  		'callback' => 'qset_edit',
+  		'access' => user_access('Add, delete, edit, question sets'),
+  		'type' => MENU_CALLBACK,
+  	);
+  	$items[] = array
+  	(
+  		'path' => 'q_add',
+  		'title' => t('Edit/Add question in the set'),
+  		'callback' => 'qadd',
+  		'access' => user_access('Add, delete, edit, question sets'),
+  		'type' => MENU_CALLBACK,
+  	);
+  	// Question Set Functions - Menu Items
+  	$items[] = array
+  	(
+  		'path' => 'qset_move',
+  		'title' => t('Moving the question set up or down in the order'),
+  		'callback' => 'qset_move',
+  		'access' => user_access('Add, delete, edit, question sets'),
+  		'type' => MENU_CALLBACK,
+  	);
+  	$items[] = array
+  	(
+  		'path' => 'qset_activate',
+  		'title' => t('Activating/Deactivating the Question set'),
+  		'callback' => 'qset_activate',
+  		'access' => user_access('Add, delete, edit, question sets'),
+  		'type' => MENU_CALLBACK,
+  	);
+  	$items[] = array
+  	(
+  		'path' => 'qset_delete',
+  		'title' => t('Deleting the Current Question Set'),
+  		'callback' => 'qset_delete',
+  		'access' => user_access('Add, delete, edit, question sets'),
+  		'type' => MENU_CALLBACK,
+  	);
+  	$items[] = array
+  	(
+  		'path' => 'qset_parser',
+  		'title' => t('Parses the active question sets'),
+  		'callback' => 'qset_parser',
+  		'access' => user_access('Add, delete, edit, question sets'),
+  		'type' => MENU_CALLBACK,
+  	);
+  	//pr($qadmin_items);
+  }
+  return $items;
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<glossary>
+  <term>
+    <term_name>
+      <![CDATA[Circuit]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Electricity flows in a circuit – from a battery or power supply through connected electrical wires, lamps, and other components back to the battery or power supply. If you interrupt the circuit, electricity won’t flow and electrical components in an interrupted circuit won’t operate.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Volts]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Volts measure the force – called the electromotive force – that pushes electricity through a circuit. A dry cell (for instance a D cell) has an electromotive force of 1.55 volts DC. The electrical outlets in your house have an electromotive force of about 115 volts AC. The volt was named in honor of the Italian experimental physicist Alessandro Volta (1745-1827), who invented one of the first chemical batteries.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Amperes]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>An ampere (or amp) is the measure of the flow of electricity. A 100 watt lamp bulb draws about 0.8 amperes. An ordinary (850 watt) toaster draws about 7.4 amperes. The ampere was named in honor of the French mathematician and physicist André-Marie Ampère (1775-1836), who worked on developing the theory of electromagnetism.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Ohms]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>An ohm is the measure of electrical resistance. All ordinary materials resist the flow of electric current. Glass and pure water have high resistance, wood and silicon have moderate resistance, and copper and salt water have a low resistance. The ohm was named after the German physicist Georg Simon Ohm (1789 – 1854), who discovered the relationship (now known as Ohm’s Law) among voltage, current, and resistance in a circuit.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Power]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Electrical Power (measured in watts) is defined as the product of voltage times current. To find the power consumed by a lamp bulb, for instance, measure the current flowing through the lamp and multiply this by the voltage measured across the lamp.</p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>The electric meter for your house or apartment measures kilowatt-hours: the product of power (in thousands of watts) and the time (in hours) that the power is used.  If you use a 850 watt toaster for an hour, you have used 0.85 kilowatt-hours of electrical energy.<p><img src="assets/xml/glossary/images/power.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Watts]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The power consumed by an electrical device – or by an electrical circuit – is measured in watts. One watt is equal to 1 volt times 1 ampere. The watt was named after the Scottish engineer James Watt (1736 – 1819), who improved the power (and efficiency) of the Newcomen steam engine.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Ohm’s Law]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Ohm’s Law expresses the relationship of current, voltage, and resistance in an electric circuit. Here’s an example: Electrical sockets provide a voltage of about 115 volts. A 100 watt incandescent bulb has a resistance of about 144 ohms.  When the lamp is on, it conducts a current of about 0.8 amperes.<p><img src="assets/xml/glossary/images/ohms_law.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Frequency]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Alternating Current (AC) changes direction, typically many times each second. The AC in the nation’s electrical grid runs at a frequency of 60 hertz: the current changes back and forth 60 times each second. The European grid runs at a frequency of 50 hertz. Many aircraft electrical systems run at a frequency of 400 hertz.</p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>The hertz was named after the German physicist Heinrich Rudolf Hertz (1857-1894), who was the first person to demonstrate the existence of electro-magnetic (radio) waves.<p><img src="assets/xml/glossary/images/frequency.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[AC and DC Electricity]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Direct current (DC) electricity means that the current goes only in one direction. Alternating current (AC) electricity constantly changes direction.<p><img src="assets/xml/glossary/images/ac_dc.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>The electrical power that comes into our houses is AC. Transformers work in AC circuits to change voltages and currents while maintaining power levels constant. This is a great advantage and is the primary reason that our national electrical grid is AC. AC can be changed into DC by using a rectifier (for instance, a diode). DC can be changed into AC by using an inverter or an AC motor connected to a DC generator.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Resistors]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Resistors are used to cut down the flow of electricity through a circuit. Each resistor is labeled with a number that tells you how much it will reduce the amount of current in your circuit, if you know the voltage.</p><p><img src="assets/xml/glossary/images/resistor.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Capacitors]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Capacitors are storage containers that can be filled with electrical energy. They are made out of two large, thin sheets of foil-like conductive material separated by an insulating film. Capacitors are used in circuits to accumulate electric current over time, to smooth out irregular voltages, and to block DC currents while allowing AC currents to pass.</p><p><img src="assets/xml/glossary/images/capacitors.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Wires]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Copper wire is used in circuits because it is a good conductor of electricity. Good conductors of electricity have low resistance and allow current to flow.<p><img src="assets/xml/glossary/images/wire.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Lamps]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Lamps (light bulbs) are devices that convert electric power into light. Electricity flowing through the lamp filament heats it up until it glows red, yellow, or almost white. Using a lamp in your circuit is a good way of seeing that electricity is flowing.<p><img src="assets/xml/glossary/images/lamp.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Switches]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>When you flip the switch on and off in your circuit, you are connecting and disconnecting the circuit. When you turn the switch "on", two metal contacts come together to make a conducting path through the switch and allow electricity to flow.<p><img src="assets/xml/glossary/images/switch.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Diodes]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Diodes conduct electricity in one direction only. Think of the triangle in the diagram as an arrow that points from positive to negative. Diodes are often used to change AC (alternating current) to DC (direct current). Diodes can be made of various crystals (silicon, germanium) or heated vacuum tubes (thermionic diode).<p><img src="assets/xml/glossary/images/diode.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[LEDs]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Light Emitting Diodes are electronic devices that emit light through a process called electroluminescence. LEDs use much less energy than an incandescent lamp for the same amount of light and they have a very long life. They are relatively expensive and require careful current and heat management.<p><img src="assets/xml/glossary/images/led.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Transformers]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>When the two half-transformers are put together they make up a transformer. Transformers, which work only on AC power, change voltage to a higher or lower value.  They are made of coils of wire wound on a steel core. More turns of wire are used on the high voltage half.<br /><br />Transformers on electric company poles change high voltage electrical power from power plants to low voltage electricity for people to use. Transformers are often used in electric appliances to reduce the voltage still further.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Solenoids]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>In DC Circuits: The solenoid is an electromagnet. When current flows through the wires, the magnetic field it creates attracts the iron core.<p><img src="assets/xml/glossary/images/solenoid.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>In AC Circuits: The solenoid is an electromagnet as with DC power, but it is also an inductor. In an AC circuit, inductors decrease (or impede) the flow of electricity.<br /><br />When you insert the iron core, the solenoid's ability to impede the flow of electricity is increased. Check it out using the current meter.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[AC Motors]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>This motor is a shaded-pole motor. It will run only on AC power. This kind of motor is inexpensive but not very efficient.<p><img src="assets/xml/glossary/images/ac_motor.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>It draws a lot more current than the DC motor. Connect each motor to a power supply and check it on the current meter.<br /><br />A couple of turns of heavy copper wire are wound around one side of the motor’s steel frame. This “shaded pole” makes the motor self-starting. Shaded-pole motors are used in small appliances where not much mechanical power is required.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[DC Motors]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>This motor is a permanent magnet motor and works on DC power only.<br /><br />Permanent magnet motors can be powerful and efficient and are widely used for small applications.<p><img src="assets/xml/glossary/images/dc_motor.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>If the current flow through the motor is reversed, the motor will turn in the other direction. These motors contain a number of permanent magnets and a spinning coil of wire wound on a steel core. Electricity is fed to the coil with carbon brushes.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Diode Bridge]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Diodes conduct electricity in one direction only. The bridge uses 4 diodes to turn alternating current into pulsating direct current. If a capacitor is placed across the diode bridge, smooth DC power is produced.<p><img src="assets/xml/glossary/images/diode_bridge.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Power Supplies]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>These power supplies give a constant 5 volts output with a 3 ampere current limit — which means they are safe for you to use!<p><img src="assets/xml/glossary/images/power_supplies.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+</glossary>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Measuring with the ruler</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Turn the video switch to “Binocular Microscope” and turn on the microscope using the switch at the base of the scope on the right.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmpr_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the nose ring above the objective lenses so the short “finder” lens with the red line (4 X) is in front and clicks into place pointing straight down at the flat microscope stage.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmpr_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Find the Ruled Stage Micrometer slide and place it on the microscope and center it.  Watch the monitor and focus on the slide using the coarse and fine focus knobs.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmpr_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the nose ring above the objective lenses so that the 10 X lens clicks into place.  Adjust the focus so that the rulings on the micrometer slide appear sharp on the monitor.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmpr_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Find the plastic metric ruler and place it gently on the monitor screen next to the image of the micrometer slide rulings.  Write down the length between 0 and 1.0 mm on the image.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmpr_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Observe a specimen you want to measure under the 10X objective lens.  Measure the image with the ruler and divide it by the magnification you wrote down in step 5.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmpr_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>You can repeat steps 3 to 6 to find the magnification using the 40X objective.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmpr_05.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>The scale on the micrometer slide is 2 mm long.  It is divided into 20 parts, each one 0.1 mm wide. &#xD;</p><p>Comparing a ruler on the microscope stage with a ruler on the screen is an easy way to find the exact magnification of the microscope. If 1 mm on the stage is equal to 10 cm (100 mm) on the screen, you know you have a magnification of 100. Everything you see on the screen will be 100 times larger than it is in real life. &#xD;</p><p> Eyepiece reticles are often used to measure the dimensions of specimens. They are calibrated with a ruled stage micrometer slide as shown in the drawing.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmpr_07.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[measurement.png]]>
+  </activity>
+</experiment>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>AC Motors</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Push the button to turn on the power supplies.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[acm_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[acm_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Set the AC Power Supply frequency to 60 hertz.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[acm_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[acm_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Find the AC Motor block, the wire block, and the switch block and connect them in a circuit with the AC Power Supply like this…</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[acm_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[acm_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the motor on and off by using the switch.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[acm_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[acm_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Try substituting the DC motor for the AC motor? What happens?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[acm_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[acm_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Try changing the frequency of the AC power supply while using each motor in turn. What do you observe?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[acm_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[acm_06.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Shaded-pole motors like this AC motor are sensitive to the frequency of the AC current. Luckily, the frequency of house current is very stable at 60 hertz (cycles per second).<br /><br />When you connect a DC motor to the AC power supply set at 60 hertz, the motor simply vibrates. The current switches back and forth 60 times a second, and the motor can’t respond fast enough to start turning. If you lower the frequency, the motor will turn one way then the other, oscillating at the frequency of the power supply.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[acm_07.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[ac_motors_01.png]]>
+  </activity>
+</experiment>

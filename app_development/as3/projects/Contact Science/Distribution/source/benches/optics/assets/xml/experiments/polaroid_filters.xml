@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Advanced: Polaroid filters</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Set up a Slide Projector but place one Polaroid Filter between the projection lamp and the slide. If you have them, look at the projected image as you rotate the Polaroid Filter. You can add a second Polaroid Filter next to the lens and see what happens when you rotate it.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

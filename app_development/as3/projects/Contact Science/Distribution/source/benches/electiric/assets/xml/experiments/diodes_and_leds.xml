@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Diodes and LEDs</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Push the button to turn on the power supplies.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[dled_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[dled_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Find the lamp bulb block, the diode block, and the switch block.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[dled_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[dled_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Connect them in a circuit with the DC Power Supply like this.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[dled_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[dled_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the lamp on and off by using the switch. If the lamp doesn’t light, try turning the diode block around.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[dled_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[dled_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Once you’ve made the lamp turn off and on, try taking the lamp and diode away and make a circuit with the switch, wire, and the LED block. Can you get it to turn on and off?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[dled_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[dled_05.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Diodes and LEDs (Light Emitting Diodes) let electricity pass one way but not the other. To get them to work, you need to provide a path from the negative end of the diode to the negative side of a battery or power supply.<br /><br />Diodes are used in electric circuits to block electric current from flowing the wrong way.<br /><br />LEDs use much less electrical power than incandescent lamps. You can see this by checking the ammeter on the DC power supply. Compare the current drawn by the LEDs and by the lamp.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[dled_06.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[diodes_and_leds_01.png]]>
+  </activity>
+</experiment>

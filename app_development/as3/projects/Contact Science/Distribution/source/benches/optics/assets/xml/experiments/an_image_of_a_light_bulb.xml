@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>An image of a light bulb</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Position the lamp forward - pull the handle, like this...</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[ailb_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ailb_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>If the lamp is dim, push the button until the lamp is bright.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[ailb_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ailb_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Medium Focal Length Lens on the bench in Zone 1.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[ailb_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ailb_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Screen on the bench in Zone 3.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[ailb_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ailb_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Slide the Medium Focal Length Lens back and forth. You'll see different parts of the light bulb and its reflector come into focus.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[ailb_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ailb_05.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>Something else to try!</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Remove the Screen and move the Lens to the middle of Zone 1 (a little closer to the Lamp). You can see a large image of the bulb and reflector cast onto a distant wall (or anything or anyone else in the light path).</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[ailb_07.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[1lens.swf]]>
+  </activity>
+</experiment>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Converting AC to DC</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>You can use one diode – or several – to convert AC to DC. Try connecting the DC motor directly to the AC power supply (set the frequency to 60 hertz). Now put the diode into the circuit. Does the motor run? Check what’s happening by placing the two oscilloscope leads on either side of the motor.<br /><br />You can use the diode bridge and a capacitor to make a filtered DC supply. First connect the bridge to the AC supply (set the frequency to 60 hertz). Connect the DC motor to the other side of the bridge. Use the oscilloscope the compare the input from the supply and the output to the motor. Now add a capacitor across the circuit and check the output again. What differences do you observe?<br /><br />Trace the flow of electricity from the power supply through a diode, through the motor, through a second diode, and back to the power supply again.  You can think of the triangles on the diode symbol as arrows that show the path from positive to negative.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[actdc_01.png]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

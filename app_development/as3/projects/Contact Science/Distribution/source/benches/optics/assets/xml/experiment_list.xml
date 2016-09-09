@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- The title attribute is the title that appears on the experiment selection screen. -->
+<!-- The value for the timeout attribute is in seconds. -->
+<lab_companion topic="Optics" timeout="180">
+  <intro_text filename="intro.png">
+    <![CDATA[<p>Light travels in straight lines and in all directions away from a single point.</p>]]>
+  </intro_text>
+  <intro_text>
+    <![CDATA[<p>Lenses refract, or bend, light rays so they converge at one point. You can then use lenses to control light.</p>]]>
+  </intro_text>
+  <experiment filename="make_a_slide_projector.xml">
+    <![CDATA[<p>Make a slide projector</p>]]>
+  </experiment>
+  <experiment filename="an_image_of_a_light_bulb.xml">
+    <![CDATA[<p>An image of a lightbulb</p>]]>
+  </experiment>
+  <experiment filename="make_a_microscope.xml">
+    <![CDATA[<p>Make a microscope</p>]]>
+  </experiment>
+  <experiment filename="half_a_lens_whole_image.xml">
+    <![CDATA[<p>Half a lens = whole image</p>]]>
+  </experiment>
+  <experiment filename="project_your_hand.xml">
+    <![CDATA[<p>Project your hand</p>]]>
+  </experiment>
+  <experiment filename="color_filters.xml">
+    <![CDATA[<p>Advanced:<br />Color filters</p>]]>
+  </experiment>
+  <experiment filename="half_hole.xml">
+    <![CDATA[<p>Advanced:<br />Half hole</p>]]>
+  </experiment>
+  <experiment filename="image_relay.xml">
+    <![CDATA[<p>Advanced:<br />Image relay</p>]]>
+  </experiment>
+  <experiment filename="pin_hole.xml">
+    <![CDATA[<p>Advanced:<br />Pin hole</p>]]>
+  </experiment>
+  <experiment filename="polaroid_filters.xml">
+    <![CDATA[<p>Advanced:<br />Polaroid filters</p>]]>
+  </experiment>
+</lab_companion>

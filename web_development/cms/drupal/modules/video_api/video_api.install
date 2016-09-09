@@ -1,0 +1,53 @@
+<?php
+function video_api_schema() {
+  $schema['video_portal_dataset'] = array(
+    'description' => t('Serialized information on video segments from various sources'),
+    'fields' => array(
+      'video_portal_dataset_id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'topic' => array(
+        'type' => 'varchar', 
+        'length' => 255, 
+        'not null' => TRUE, 
+        'default' => '',
+      ),
+      'data' => array(
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => TRUE,
+      ),
+      'created' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('video_portal_dataset_id'),
+    'mysql_suffix' => "ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Video portal data for video_api module' AUTO_INCREMENT=1"
+  );
+  
+  return $schema;
+}
+
+function video_api_install() {
+  // Add the table used by the module
+  switch ($GLOBALS['db_type']) {
+    case 'mysql':
+    case 'mysqli':
+      drupal_install_schema('video_api');
+      break;
+  }
+}
+
+function video_api_uninstall() {
+  // Remove the table used by the module
+  drupal_uninstall_schema('video_api');
+  
+  cache_clear_all('*', 'cache', TRUE);
+  cache_clear_all('*', 'cache_filter', TRUE);
+  cache_clear_all('*', 'cache_menu', TRUE);
+  cache_clear_all('*', 'cache_page', TRUE);
+}

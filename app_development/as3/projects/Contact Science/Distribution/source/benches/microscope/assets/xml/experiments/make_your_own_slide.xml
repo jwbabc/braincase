@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Make your own slide</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Remove a strand of hair, some lint, or some fibers from your clothes. Or find something else you’d like to examine under the microscope. This will be your specimen.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[myos_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Take two blank plastic slides from the slide holder and sandwich the specimen between them.”</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[myos_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the nose ring above the objective lenses so the short “finder” lens with the red line (4 X) is in front and clicks into place pointing straight down at the flat microscope stage.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[myos_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the video switch to “Binocular Microscope. Place the slide sandwich with your specimen on the microscope stage.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[myos_04.flv]]>
+    </video>
+  </step>
+   <step>
+    <text>
+      <![CDATA[<p>Look at the monitor and move the slide on the stage until you find the specimen. Focus by turning the big knobs at the back of the microscope until the specimen is clearly visible.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[myos_05.flv]]>
+    </video>
+  </step><step>
+    <text>
+      <![CDATA[<p>If the image is too dark or too bright, adjust the light dimmer wheel at the base of the scope on the left side.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[myos_06.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Explore your specimen by moving the slide around the stage and adjusting the focus knobs.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_07.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[myos_07.flv]]>
+    </video>
+  </step>
+   <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>You use two slides to make the specimen as flat as possible.  This makes it easier to focus on the specimen as you move it around the stage.  In a lab, observers often glue down a thin glass cover slip over their specimen to protect it and keep it flat.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[myos_09.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[slide.png]]>
+  </activity>
+</experiment>

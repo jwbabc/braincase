@@ -1,0 +1,261 @@
+<?php
+// $Id: qadmin.module 2348 2010-03-18 22:47:53Z bkennedy $
+
+/**
+ * @file
+ * Quiz Show admin tool
+ *
+ * Initially developed by Joel Back <jback@smm.org>
+ * Further edits and development by Chach Sikes and bryan kennedy
+ * The Science Museum of Minnesota
+ * 120 West Kellogg Blvd
+ * Saint Paul, MN 55104
+ *
+ * -- Description: --
+ * This module is used with Drupal to create an administration tool for the
+ * Science Buzz Quiz Show.
+ *
+ * The question sets contain a "header" which has the title of the set, its
+ * author, and the date of creation.
+ *
+ * Within each question set is a set of easy and hard questions (these can
+ * be an unlimited amount) each question contains its body copy, answer
+ * a, b, and c, correct answer, and the explanation that follows after the
+ * user submits an answer.
+ *
+ * Users will be able to create, edit, activate/deactivate, and delete question
+ * sets, and the questions contained within them. They will also have the
+ * ability to change the order in which the questions appear (moving them up
+ * and down in the list).
+ *
+ * The second component to the module is a parser that will generate the XML
+ * files needed for the flash front-end to display the question set information.
+ * The XML files are placed in a *.tar file for downloading to the client
+ * computer.
+ */
+ 
+ini_set('display_errors', 'stdout');
+error_reporting(E_ALL);
+
+/**
+ * Implementation of hook_help().
+ */
+function qadmin_help($path, $arg) {
+  switch ($path) {
+    case 'admin/modules#description':
+      return t('Exports content XML files for the Science Buzz Quiz Show flash application-exhibit kiosk.');
+  }
+}
+
+/**
+ * Called from qadmin_cron()
+ *
+ * Formats the question set data as an array
+ * Outputs the array to XML in the proper format for the newscast reader
+ * Writes the xml to files in the drupal files directory using calls
+ * from the nodeWrite module.
+ */
+function qadmin_write_question_set_xml($questions_list, $manager_node_id) {
+  $question_set_files = array();
+  $question_set_xml = array();
+
+  // XML header information
+  $xml_header = '<?xml version="1.0" encoding="UTF-8"?>';
+  $xml_admin_header = '<?xml version="1.0" encoding="UTF-8"?><set_admin><set_list total_qsets="'. count($questions_list) .'">';
+
+  // Question set admin xml string
+  $xml_admin_string = $xml_admin_header;
+
+  // Form the $xml string from $questions_list
+  // Push title information to the $question_sets_admin string
+  // Push $xml to the $question_xml array
+  $set_counter = 1;
+  foreach ($questions_list as $question_set_nid => $question_set) {
+  
+    $question_set_node = node_load($question_set_nid, NULL, TRUE);
+    $question_set_created = format_date($question_set_node->created, 'large', NULL, NULL);
+    $question_set_author = $question_set_node->name;
+    $question_set_title = $question_set_node->title;
+
+    // Format the title to match the filename
+    $xml_lowercase = drupal_strtolower($question_set_title);
+    $xml_cleaned = preg_replace('/[^a-z0-9]/', "_", $xml_lowercase);
+    $xml_filename = $set_counter .'_'. $xml_cleaned;
+    $set_counter++;
+
+    // Add the title information to the admin xml
+    $xml_admin_string .= '<qset>'. $xml_filename .'</qset>';
+
+    // Add the filename to the files array
+    array_push($question_set_files, $xml_filename);
+
+    // Question set xml string
+    $num_easy_questions = count($question_set['easy']);
+    $num_hard_questions = count($question_set['hard']);
+    $xml_string = $xml_header;
+    $xml_string .= '<question_set>';
+    $xml_string .= '<set_info author="'. $question_set_author .'" title="'. $question_set_title .'" num_easy="'. $num_easy_questions .'" num_hard="'. $num_hard_questions .'" date="'. $question_set_created .'"/>';
+    unset($question_set_node);
+    foreach ($question_set as $question_difficulty => $question) {
+      switch ($question_difficulty) {
+        case 'easy':
+            foreach ($question as $key => $field_name) {
+              if ($field_name != NULL) {
+                $e_string .= '<question>';
+                foreach ($field_name as $key => $value) {
+                  switch ($key) {
+                    case 'field_text':
+                      $e_string .= '<question_txt>'. implode($value[0]) .'</question_txt>';
+                      break;
+                    case 'field_answer_a':
+                      $e_string .= '<answer_a>'. implode($value[0]) .'</answer_a>';
+                      break;
+                    case 'field_answer_b':
+                      $e_string .= '<answer_b>'. implode($value[0]) .'</answer_b>';
+                      break;
+                    case 'field_answer_c':
+                      $e_string .= '<answer_c>'. implode($value[0]) .'</answer_c>';
+                      break;
+                    case 'field_explanation':
+                      $e_string .= '<explanation_txt>'. implode($value[0]) .'</explanation_txt>';
+                      break;
+                    case 'field_correct':
+                      $e_string .= '<correct>'. implode($value[0]) .'</correct>';
+                      break;
+                  }
+                }
+                $e_string .= '</question>';
+              }
+            }
+          break;
+        case 'hard':
+          foreach ($question as $key => $field_name) {
+            if ($field_name != NULL) {
+              $h_string .= '<question>';
+              foreach ($field_name as $key => $value) {
+                switch ($key) {
+                  case 'field_text':
+                    $h_string .= '<question_txt>'. implode($value[0]) .'</question_txt>';
+                    break;
+                  case 'field_answer_a':
+                    $h_string .= '<answer_a>'. implode($value[0]) .'</answer_a>';
+                    break;
+                  case 'field_answer_b':
+                    $h_string .= '<answer_b>'. implode($value[0]) .'</answer_b>';
+                    break;
+                  case 'field_answer_c':
+                    $h_string .= '<answer_c>'. implode($value[0]) .'</answer_c>';
+                    break;
+                  case 'field_explanation':
+                    $h_string .= '<explanation_txt>'. implode($value[0]) .'</explanation_txt>';
+                    break;
+                  case 'field_correct':
+                    $h_string .= '<correct>'. implode($value[0]) .'</correct>';
+                    break;
+                }
+              }
+              $h_string .= '</question>';
+            }
+          }
+          break;
+      }
+    }
+    $xml_string .= '<easy>'. $e_string .'</easy><hard>'. $h_string .'</hard>';
+    $xml_string .= '</question_set>';
+    $question_set_xml[] = $xml_string;
+    unset($xml_string);
+    unset($e_string);
+    unset($h_string);
+  }
+
+  // End the admin file with the proper closing tags
+  $xml_admin_string .= '</set_list>';
+  $xml_admin_string .= '</set_admin>';
+
+  // Add the admin xml file to the xml array
+  $question_set_xml[] = $xml_admin_string;
+
+  // Add the admin file to the end of the files array
+  array_push($question_set_files, 'qset_admin');
+
+  // Create the directory sites/default/files/nwrite/quiz
+  $file_path = file_directory_path() .'/qadmin/'. $manager_node_id .'/';
+  file_check_directory($file_path, 1);
+
+  // Write the xml files to the Drupal file system
+  $slot = 0;
+  foreach ($question_set_files as $key => $file_name) {
+    $question_set_file = file_save_data($question_set_xml[$slot], $file_path .'/'. $file_name .'.xml', FILE_EXISTS_REPLACE);
+    $slot++;
+  }
+
+  // Create the *.tar in the proper directory
+  $command = 'tar -cvf '. $file_path .'/'. $manager_node_id .'.tar.gz '. $file_path .'/'.'*.xml';
+  exec($command, $output);
+}
+
+/**
+ * Loads the node data from the question set manager
+ *
+ * Formats the data from the manager as an array
+ * References the question sets associated with the manager
+ * Outputs the array to XML in the proper format for the question set reader
+ * Writes the xml to files in the drupal files directory using qadmin_write_question_set_xml
+ */
+function qadmin_cron() {
+  // Array of the question set manager node ids
+  $manager_node_list = array(13929, 13873);
+  
+  // Generate the array for the question sets based on the question set manager node_id
+  foreach ($manager_node_list as $manager_node_id) {
+    // Populate the question set list with data from the question set manager
+    $question_set_list = node_load($manager_node_id);
+    
+    $question_set = array();
+    
+    foreach ($question_set_list->field_reference_question_set as $value) {
+      $question_set_node = node_load($value['nid'], NULL, TRUE);
+      array_push($question_set, $question_set_node);
+    }
+    
+    $content = array();
+    $questions = array();
+          
+    // Populate the questions from the field references
+    foreach ($question_set as $question_set_node) {
+      foreach ($question_set_node->field_reference_easy_question as $node_reference) {
+        $easy_question_node = node_load($node_reference['nid'], NULL, TRUE);
+        if ($easy_question_node->field_text != NULL) {
+          $content['field_text'] = $easy_question_node->field_text;
+          $content['field_answer_a'] = $easy_question_node->field_answer_a;
+          $content['field_answer_b'] = $easy_question_node->field_answer_b;
+          $content['field_answer_c'] = $easy_question_node->field_answer_c;
+          $content['field_explanation'] = $easy_question_node->field_explanation;
+          $content['field_correct'] = $easy_question_node->field_correct;
+          $content['field_difficulty'] = $easy_question_node->field_difficulty;
+          $questions[$question_set_node->nid]['easy'][] = $content;
+          unset($content);
+        }
+      }
+      foreach ($question_set_node->field_reference_hard_question as $node_reference) {
+        $hard_question_node = node_load($node_reference['nid'], NULL, TRUE);
+        if ($hard_question_node->field_text != NULL) {
+          $content['field_text'] = $hard_question_node->field_text;
+          $content['field_answer_a'] = $hard_question_node->field_answer_a;
+          $content['field_answer_b'] = $hard_question_node->field_answer_b;
+          $content['field_answer_c'] = $hard_question_node->field_answer_c;
+          $content['field_explanation'] = $hard_question_node->field_explanation;
+          $content['field_correct'] = $hard_question_node->field_correct;
+          $content['field_difficulty'] = $hard_question_node->field_difficulty;
+          $questions[$question_set_node->nid]['hard'][] = $content;
+          unset($content);
+        }
+      }
+    }
+    
+    qadmin_write_question_set_xml($questions, $manager_node_id);
+    
+    unset($question_set_list);
+    unset($questions);
+  }
+}

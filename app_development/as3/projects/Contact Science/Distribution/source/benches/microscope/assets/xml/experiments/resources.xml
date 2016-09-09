@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Resources</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>For interesting stories about the development of microscopes and microbiology, read the classic book "Microbe Hunters" by Paul de Kruif, first published in 1926.<br /><br />"The Microscope and how to use it" is a classic book was originally published in German in 1955 and is now published in English by Dover Press. It contains great information on microscope technique, on how to prepare and preserve specimens, and on simple microphotography.<br /><br />You can find many more resources on the Contact Science Website.<br /><br />You will find a card with the web address on the bench.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[r_01.png]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

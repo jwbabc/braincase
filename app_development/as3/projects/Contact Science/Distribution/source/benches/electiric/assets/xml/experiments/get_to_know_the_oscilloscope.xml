@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Getting to know the Oscilloscope</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Connect the oscilloscope leads to the AC power supply. The wavy line on the oscilloscope graphs AC or alternating current. Adjust the frequency to see how the oscilloscope responds.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[gtkto_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[gtkto_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Connect the leads of the oscilloscope to the DC power supply. The raised or lowered straight line shows that the oscilloscope graphs DC or direct current.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[gtkto_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[gtkto_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Connect the leads of the oscilloscope to each end of the DC motor block. Watch the ‘scope as you turn the DC motor by hand one way and then the other. What does the oscilloscope tell you?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[gtkto_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[gtkto_03.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>The raised or lowered height of the straight line on the oscilloscope tells you that when you turn the motor, it generates DC electricity. The motor is actually a generator!</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[gtkto_04.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[oscilloscope_01.png]]>
+  </activity>
+</experiment>

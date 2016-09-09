@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Make an AC circuit</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Push the button to turn on the power supplies.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[maacc_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[maacc_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Set the AC Power Supply frequency to 60 hertz.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[maacc_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[maacc_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Find the lamp bulb block, the wire block, and the switch block and connect them in a circuit with the AC Power Supply like this…</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[maacc_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[maacc_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the lamp on and off by using the switch.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[maacc_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[maacc_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Once you’ve made the lamp turn off and on, try changing the frequency of the AC supply. What do you notice about the lamp?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[maacc_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[maacc_05.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Electrical components won’t work unless you put them in a circuit. You need to provide an electrical path into and out of each component.<br /><br />The alternating current (AC) power supply produces a varying current that goes one way, slows down, stops, reverses, and goes the other way. The number of times that the power supply changes from forward to backward and back again is called the frequency of the supply.<br /><br />The normal frequency of AC power in the US power grid is 60 hertz (60 cycles per second). Much of Europe uses 50 hertz power. Aircraft use 400 hertz power.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[maacc_06.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[ac_circuit_01.png]]>
+  </activity>
+</experiment>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Make a microscope</p>]]>
+  </title>
+  <step>
+    <text>
+      <![CDATA[<p>Position the lamp forward - pull the handle, like this...</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mm_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mm_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>If the lamp is bright, push the button until the lamp is dim.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mm_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mm_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Specimen on the bench in Zone 1.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mm_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mm_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Short Focal Length Lens 3 inches from the Specimen. Use the measuring rule to be accurate.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mm_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mm_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Eyepiece 2 inches from the Short Focal Length Lens so that the small opening is to the right.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mm_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mm_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Make sure the lamp is on the dim setting. Take a peek. To focus, slide the Short Focal Length Lens back and forth.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mm_07.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mm_06.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What's going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>A microscope magnifies small objects. A short focal length objective lens forms an image, and the eyepiece magnifies it. Objects viewed with a microscope are placed very close to the objective lens. Because the objective has a very short focal length, an enlarged image is formed.  A short focal length eyepiece is used to magnify the image even further. A shorter focal length objective and a shorter focal length eyepiece will result in greater magnification. Can you make a microscope with other lens combinations?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mm_09.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[2lenses.swf]]>
+  </activity>
+</experiment>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Resources</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>There are many good books, websites, and videos on electricity and electronics.<br /><br />"Teach Yourself Electricity and Electronics" by Stan Gibilisco is a well-reviewed guide for hobbiests, students, and people who are interested in a technical career.<br /><br />The DK Eyewitness book "Electricity" by Steve Parker and Laura Buller looks at the history of electricity from earliest to modern times and tells the stories of pivotal discoveries by Benjamin Franklin, Michael Faraday, Thomas Edison, Nicola Tesla, Heinrich Hertz, JJ Thompson, Robert Van de Graaf, and many others.<br /><br />You can find many more resources on the Contact Science Website. You will find a card with the web address on the bench.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[r_01.png]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Half a lens = whole image</p>]]>
+  </title>
+  <step>
+    <text>
+      <![CDATA[<p>Position the lamp forward - pull the handle, like this...</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hlwi_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hlwi_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>If the lamp is dim, push the button until the lamp is bright.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hlwi_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hlwi_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the 35mm Slide on the bench in Zone 1.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hlwi_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hlwi_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Medium Focal Length Lens on the bench in Zone 2.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hlwi_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hlwi_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Screen on the bench near the end of the table and move the lens back and forth until the slide is in focus...</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hlwi_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hlwi_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Now, hold your hand over the top portion of the Medium Focal Length Lens. Try covering up almost the whole lens. You should still be able to see the whole image.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hlwi_07.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hlwi_06.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>How can this be?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Light coming from the object travels in a lot of different directions. So, light from the top part of the object does not travel only through the top part of the lens. Some of the light goes through the bottom of the lens and some goes through the middle of the lens too. So when you block half of the lens, you are just blocking half of the total light going through the lens, and the image gets dimmer.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hlwi_08.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[halfImage.swf]]>
+  </activity>
+</experiment>

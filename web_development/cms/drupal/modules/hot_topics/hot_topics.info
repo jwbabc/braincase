@@ -1,0 +1,7 @@
+name = "Hot Topics"
+description = "Displays the most popular content."
+package = Custom
+
+version = "6.x-1.0"
+core = "6.x"
+project = "Next Avenue"

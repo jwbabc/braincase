@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemslist>
+	<digging_tools>
+		<tool>
+			<name>Adze</name>
+			<category>digging</category>
+			<desc>
+			Use this shovel-sized tool to rip through hard materials.
+			</desc>
+			<cost>69.95</cost>
+			<weight>5</weight>
+			<image>adze.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Air compressor</name>
+			<category>digging</category>
+			<desc>
+			Blow all that sand out of the way quickly.
+			</desc>
+			<cost>135.00</cost>
+			<weight>20</weight>
+			<image>air.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Blow dryer</name>
+			<category>digging</category>
+			<desc>
+			Blow sand and dust away -- and look good at the same time.
+			</desc>
+			<cost>20.00</cost>
+			<weight>2</weight>
+			<image>blowdryer.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Broom & dust pan</name>
+			<category>digging</category>
+			<desc>
+			There’s a lot to keep clean in the sandy desert.
+			</desc>
+			<cost>6.49</cost>
+			<weight>1.5</weight>
+			<image>broom.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Brush</name>
+			<category>digging</category>
+			<desc>
+			There’s a lot to keep clean in the sandy desert.
+			</desc>
+			<cost>8.00</cost>
+			<weight>.5</weight>
+			<image>brush.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Chainsaw</name>
+			<category>digging</category>
+			<desc>
+			You can rip through wood really fast with this.
+			</desc>
+			<cost>212.14</cost>
+			<weight>9</weight>
+			<image>chainsaw.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Dynamite</name>
+			<category>digging</category>
+			<desc>
+			It’s a quick way to make a hole, but will the artifacts survive?
+			</desc>
+			<cost>500.00</cost>
+			<weight>8</weight>
+			<image>dynamite.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Gloves</name>
+			<category>digging</category>
+			<desc>
+			Slip these on if you want to protect your hands from getting blistered.
+			</desc>
+			<cost>40.00</cost>
+			<weight>.5</weight>
+			<image>gloves.jpg</image>
+			<digging>0.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Gophers</name>
+			<category>digging</category>
+			<desc>
+			Let them do all your digging for you! They're free, if you can catch them.
+			</desc>
+			<cost>0.00</cost>
+			<weight>3</weight>
+			<image>gopher.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Hammer</name>
+			<category>digging</category>
+			<desc>
+			Swing this tool around to break through hard surfaces.
+			</desc>
+			<cost>89.99</cost>
+			<weight>1.5</weight>
+			<image>hammer.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Jackhammer</name>
+			<category>digging</category>
+			<desc>
+			Fire up this high-powered tool to crack through rock and other hard materials.
+			</desc>
+			<cost>179.99</cost>
+			<weight>24</weight>
+			<image>jackhammer.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Mapping equipment</name>
+			<category>digging</category>
+			<desc>
+			Use these surveying tools to know exactly where you are.
+			</desc>
+			<cost>30.00</cost>
+			<weight>.5</weight>
+			<image>measuring_guage.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Pitchfork</name>
+			<category>digging</category>
+			<desc>
+			In a hurry? Poke around in the ground with this.
+			</desc>
+			<cost>18.00</cost>
+			<weight>3</weight>
+			<image>pitchfork.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Powersaw</name>
+			<category>digging</category>
+			<desc>
+			Great for quickly ripping through wood and rock.
+			</desc>
+			<cost>45.00</cost>
+			<weight>6</weight>
+			<image>powersaw.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Sand blaster</name>
+			<category>digging</category>
+			<desc>
+			The fastest way to power your way through rock and hard surfaces.
+			</desc>
+			<cost>60.00</cost>
+			<weight>65</weight>
+			<image>sand_blaster.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Screwdriver</name>
+			<category>digging</category>
+			<desc>
+			Pick away at things with this sharp tool.
+			</desc>
+			<cost>5.00</cost>
+			<weight>.5</weight>
+			<image>screwdriver.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Shaker screen</name>
+			<category>digging</category>
+			<desc>
+			Use this like a sieve to shift through dirt and sand to find small objects.
+			</desc>
+			<cost>134.00</cost>
+			<weight>7</weight>
+			<image>sifter_screen.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Shovel</name>
+			<category>digging</category>
+			<desc>
+			Use this to scoop out large amounts of dirt and sand.
+			</desc>
+			<cost>29.99</cost>
+			<weight>4</weight>
+			<image>shovel.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Stakes and string</name>
+			<category>digging</category>
+			<desc>
+			You’ll need to mark out the areas you want to dig.
+			</desc>
+			<cost>6.00</cost>
+			<weight>20</weight>
+			<image>stakesstring.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Surveying scope</name>
+			<category>digging</category>
+			<desc>
+			Use this tool to map specific coordinates on the ground as you stake out and prepare your digging site.
+			</desc>
+			<cost>20.00</cost>
+			<weight>6</weight>
+			<image>survey_scope.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Tape measure</name>
+			<category>digging</category>
+			<desc>
+			Accurately record where you find objects.
+			</desc>
+			<cost>16.00</cost>
+			<weight>1</weight>
+			<image>measure.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Tire buckets</name>
+			<category>digging</category>
+			<desc>
+			These handy homemade tools are great for moving things around.
+			</desc>
+			<cost>10.00</cost>
+			<weight>2</weight>
+			<image>tirebucket.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Trowel</name>
+			<category>digging</category>
+			<desc>
+			Use this hand-held tool for precise digging and picking debris away from items.
+			</desc>
+			<cost>9.36</cost>
+			<weight>2</weight>
+			<image>trowel.jpg</image>
+			<digging>.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Wrench</name>
+			<category>digging</category>
+			<desc>
+			This is great for busting through hard material.
+			</desc>
+			<cost>20.00</cost>
+			<weight>1</weight>
+			<image>wrench.jpg</image>
+			<digging>-.25</digging>
+			<preservation>0</preservation>
+			<survivability>0</survivability>
+		</tool>
+	</digging_tools>
+	<preservation_tools>
+	<tool>
+			<name>Air conditioner</name>
+			<category>preservation</category>
+			<desc>
+			You’re living in the desert for weeks. It’s gonna’ be hot!
+			</desc>
+			<cost>100.00</cost>
+			<weight>42</weight>
+			<image>ac.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Blankets</name>
+			<category>preservation</category>
+			<desc>
+			Keep warm in the cool desert nights.
+			</desc>
+			<cost>20.00</cost>
+			<weight>2</weight>
+			<image>blanket.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Bubblewrap</name>
+			<category>preservation</category>
+			<desc>
+			Don't let anything break on your way home.
+			</desc>
+			<cost>50.00</cost>
+			<weight>3</weight>
+			<image>bubblewrap.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Camera</name>
+			<category>preservation</category>
+			<desc>
+			Take photos to record what you find at various levels of the dig.
+			</desc>
+			<cost>479.00</cost>
+			<weight>3.5</weight>
+			<image>camera.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Crates</name>
+			<category>preservation</category>
+			<desc>
+			Protect the artifacts you find as you ship them back to the lab.
+			</desc>
+			<cost>20.00</cost>
+			<weight>15</weight>
+			<image>crate.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>DVD player</name>
+			<category>preservation</category>
+			<desc>
+			What else is there to do at night?
+			</desc>
+			<cost>30.00</cost>
+			<weight>4</weight>
+			<image>dvd.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Fuel</name>
+			<category>preservation</category>
+			<desc>
+			Don’t get stranded out in the desert!
+			</desc>
+			<cost>150.00</cost>
+			<weight>5</weight>
+			<image>fuel.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Generator</name>
+			<category>preservation</category>
+			<desc>
+			Crank this up and create electricity when you need power.
+			</desc>
+			<cost>340.00</cost>
+			<weight>5</weight>
+			<image>generator.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>GPS unit</name>
+			<category>preservation</category>
+			<desc>
+			You’ll know for sure where you are.
+			</desc>
+			<cost>160.00</cost>
+			<weight>1</weight>
+			<image>gps.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Laptop computer</name>
+			<category>preservation</category>
+			<desc>
+			Log in everything you find on your dig for more analysis back in the lab.
+			</desc>
+			<cost>1500.00</cost>
+			<weight>5</weight>
+			<image>laptop.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Maps</name>
+			<category>preservation</category>
+			<desc>
+			You want to know where you’re going.
+			</desc>
+			<cost>8.00</cost>
+			<weight>.5</weight>
+			<image>map.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Patio furniture</name>
+			<category>preservation</category>
+			<desc>
+			You want to be comfortable while you work, right?
+			</desc>
+			<cost>250.00</cost>
+			<weight>225</weight>
+			<image>patio.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Plastic bags</name>
+			<category>preservation</category>
+			<desc>
+			Good for keeping small discovers safe and clean.
+			</desc>
+			<cost>3.00</cost>
+			<weight>1</weight>
+			<image>bags.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Plastic containers</name>
+			<category>preservation</category>
+			<desc>
+			Very handy for storing things.
+			</desc>
+			<cost>15.00</cost>
+			<weight>2</weight>
+			<image>tupperware.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Plastic sheets</name>
+			<category>preservation</category>
+			<desc>
+			Keep your work area clear of mud and dirt.
+			</desc>
+			<cost>17.00</cost>
+			<weight>2</weight>
+			<image>plastic_sheet.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Radio</name>
+			<category>preservation</category>
+			<desc>
+			Listen to music or a ball game while you dig.
+			</desc>
+			<cost>35.00</cost>
+			<weight>4</weight>
+			<image>radio.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Recording notebook</name>
+			<category>preservation</category>
+			<desc>
+			Jot down notes and sketches of the things you find. Record their locations and depths, so you can reconstruct the scene.
+			</desc>
+			<cost>3.25</cost>
+			<weight>.5</weight>
+			<image>notebook.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Reference books</name>
+			<category>preservation</category>
+			<desc>
+			You might not recognize everything you dig up.
+			</desc>
+			<cost>50.00</cost>
+			<weight>4</weight>
+			<image>refBooks.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Refridgerator</name>
+			<category>preservation</category>
+			<desc>
+			Don't let any of your discoveries spoil in the heat.
+			</desc>
+			<cost>250.00</cost>
+			<weight>86</weight>
+			<image>fridge.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Safe</name>
+			<category>preservation</category>
+			<desc>
+			Keep all your artifacts secure on the way home.
+			</desc>
+			<cost>330.00</cost>
+			<weight>100</weight>
+			<image>safe.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Sand bags</name>
+			<category>preservation</category>
+			<desc>
+			These help keep dig walls from collapsing.
+			</desc>
+			<cost>40.00</cost>
+			<weight>3</weight>
+			<image>sandbags.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Television</name>
+			<category>preservation</category>
+			<desc>
+			Does this thing get cable?.
+			</desc>
+			<cost>300.00</cost>
+			<weight>27</weight>
+			<image>tv.jpg</image>
+			<digging>0</digging>
+			<preservation>-.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Tent</name>
+			<category>preservation</category>
+			<desc>
+			Use this as your mobile lab away from headquarters, and also as place to spend your nights.
+			</desc>
+			<cost>300.00</cost>
+			<weight>33</weight>
+			<image>tent.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+		<tool>
+			<name>Tin foil</name>
+			<category>preservation</category>
+			<desc>
+			Wrap up your discoveries in protective material.
+			</desc>
+			<cost>8.00</cost>
+			<weight>1</weight>
+			<image>foil.jpg</image>
+			<digging>0</digging>
+			<preservation>.25</preservation>
+			<survivability>0</survivability>
+		</tool>
+	</preservation_tools>
+	<survivability_tools>
+		<tool>
+			<name>Flashlight</name>
+			<category>survivability</category>
+			<desc>
+			It gets dark in the desert at night.
+			</desc>
+			<cost>20.00</cost>
+			<weight>1</weight>
+			<image>flashlight.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Flip-flops</name>
+			<category>survivability</category>
+			<desc>
+			The desert has a lot of ­­sand ̶kinda like a big beach. Do you need comfortable shoes?.
+			</desc>
+			<cost>20.00</cost>
+			<weight>1</weight>
+			<image>flipflop.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>-.25</survivability>
+		</tool>
+		<tool>
+			<name>Folding cot</name>
+			<category>survivability</category>
+			<desc>
+			Set this up so you don’t have to sleep directly on the ground.
+			</desc>
+			<cost>62.99</cost>
+			<weight>24</weight>
+			<image>cot.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Hamburgers</name>
+			<category>survivability</category>
+			<desc>
+			Don’t forget to bring some cheese, too, if you want cheeseburgers.
+			</desc>
+			<cost>1.25</cost>
+			<weight>.5</weight>
+			<image>hamburgers.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>-.25</survivability>
+		</tool>
+		<tool>
+			<name>Hat</name>
+			<category>survivability</category>
+			<desc>
+			The Sun shines bright and hot in the desert, so give yourself some shade.
+			</desc>
+			<cost>50.00</cost>
+			<weight>1</weight>
+			<image>hat.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Hot dogs</name>
+			<category>survivability</category>
+			<desc>
+			Mmmmm, that’s some good eats!
+			</desc>
+			<cost>0.43</cost>
+			<weight>.5</weight>
+			<image>hotdogs.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>-.25</survivability>
+		</tool>
+		<tool>
+			<name>Ice cream</name>
+			<category>survivability</category>
+			<desc>
+			It’s hot in the desert. Cool off with a scoop or two. Just remember to keep it frozen.
+			</desc>
+			<cost>7.25</cost>
+			<weight>1</weight>
+			<image>ice_cream.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>-.25</survivability>
+		</tool>
+		<tool>
+			<name>Instant mashed potatoes</name>
+			<category>survivability</category>
+			<desc>
+			It may not be the tastiest, but heat it up with water and you can get some good, quick food.
+			</desc>
+			<cost>1.67</cost>
+			<weight>1</weight>
+			<image>mashed_potatoes.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Jeans/work pants</name>
+			<category>survivability</category>
+			<desc>
+			They hold up well and protect your legs.
+			</desc>
+			<cost>23.00</cost>
+			<weight>2</weight>
+			<image>jeans.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Knife</name>
+			<category>survivability</category>
+			<desc>
+			Will you need to cut stuff while you’re working?
+			</desc>
+			<cost>20.00</cost>
+			<weight>1</weight>
+			<image>knife.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Macaroni</name>
+			<category>survivability</category>
+			<desc>
+			Heat it up in water and you’ll have a quick meal. Get the one with fun animal shapes. 
+			</desc>
+			<cost>1.56</cost>
+			<weight>3</weight>
+			<image>macaroni.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Pizza</name>
+			<category>survivability</category>
+			<desc>
+			After a full day of digging, wouldn’t a slice be nice?
+			</desc>
+			<cost>4.95</cost>
+			<weight>2</weight>
+			<image>pizza.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>-.25</survivability>
+		</tool>
+		<tool>
+			<name>Rice</name>
+			<category>survivability</category>
+			<desc>
+			Heat it up in water and you’ve got some food ready to eat. Dry foods keep well in the desert.
+			</desc>
+			<cost>2.42</cost>
+			<weight>3</weight>
+			<image>rice.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Shorts</name>
+			<category>survivability</category>
+			<desc>
+			Working in the desert, you need to stay cool.
+			</desc>
+			<cost>12.00</cost>
+			<weight>1</weight>
+			<image>shorts.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>-.25</survivability>
+		</tool>
+		<tool>
+			<name>Sleeping bag</name>
+			<category>survivability</category>
+			<desc>
+			Crawl into this at night to stay warm while you sleep.
+			</desc>
+			<cost>38.24</cost>
+			<weight>7</weight>
+			<image>sleeping_bag.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Soup</name>
+			<category>survivability</category>
+			<desc>
+			No refrigeration needed for this. Heat it up with water and you’ve got a quick, hearty meal.
+			</desc>
+			<cost>2.50</cost>
+			<weight>1</weight>
+			<image>soup.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Sunscreen</name>
+			<category>survivability</category>
+			<desc>
+			How much shade is there at the dig site? Does your skin need protection?
+			</desc>
+			<cost>5.00</cost>
+			<weight>.5</weight>
+			<image>sunscreen.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Sweater</name>
+			<category>survivability</category>
+			<desc>
+			How much shade is there at the dig site? Does you need skin protection?
+			</desc>
+			<cost>35.00</cost>
+			<weight>2</weight>
+			<image>sweater.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>T-shirts</name>
+			<category>survivability</category>
+			<desc>
+			They’re cool, and they look cool.
+			</desc>
+			<cost>9.00</cost>
+			<weight>1</weight>
+			<image>tshirt.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>-.25</survivability>
+		</tool>
+		<tool>
+			<name>Water</name>
+			<category>survivability</category>
+			<desc>
+			There’s no well near your site? You’ll need to bring along plenty of water for drinking, cooking and cleaning.
+			</desc>
+			<cost>50.42</cost>
+			<weight>25</weight>
+			<image>water.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Water bottle</name>
+			<category>survivability</category>
+			<desc>
+			Digging during the heat of the day is hard, thirsty work. You’ll want to drink plenty of fluids.
+			</desc>
+			<cost>10.00</cost>
+			<weight>.5</weight>
+			<image>water_bottle.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Water purification gear</name>
+			<category>survivability</category>
+			<desc>
+			Is your site near a well? You’ll want to be sure the water is clean.
+			</desc>
+			<cost>78.00</cost>
+			<weight>3</weight>
+			<image>water_purification_gear.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Work boots</name>
+			<category>survivability</category>
+			<desc>
+			You’ve got a lot of tough work to do. Protect your feet.
+			</desc>
+			<cost>75.00</cost>
+			<weight>5</weight>
+			<image>boot.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+		<tool>
+			<name>Work shirts</name>
+			<category>survivability</category>
+			<desc>
+			Long sleeves protect you from the harsh environment.
+			</desc>
+			<cost>18.00</cost>
+			<weight>1</weight>
+			<image>wshirt.jpg</image>
+			<digging>0</digging>
+			<preservation>0</preservation>
+			<survivability>.25</survivability>
+		</tool>
+	</survivability_tools>
+</itemslist>

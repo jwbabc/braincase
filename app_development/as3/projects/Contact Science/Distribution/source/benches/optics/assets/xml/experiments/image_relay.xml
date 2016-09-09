@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Advanced: Image relay</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Arrange the Medium Focal Length Lens to project a slide on the Rear Projection Screen. Now add a second Medium Focal Length Lens to project the image on the Rear Projection Screen onto the big Screen. Once you’ve got it, you can remove the Rear Projection Screen. What do you notice about the image on the Screen?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

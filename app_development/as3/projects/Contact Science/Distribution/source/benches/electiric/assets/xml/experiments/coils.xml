@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Coils</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Coils of wire wound around a steel core make an electromagnet. Try making a circuit with a switch, the solenoid block, and a wire connected to the DC power supply. Notice that when the switch is on, the metal bar is pulled into the coil of wire. Solenoids are commonly used for remotely unlocking apartment and car doors.<br /><br />Coils are also used in AC circuits. Try connecting the solenoid directly across the AC power supply set to 60 hz. Note that the solenoid should pull in. Then slowly turn the frequency down as you watch the ammeter on the power supply.  You’ll see that the solenoid will draw more and more current the more you reduce the frequency – until the circuit breaker pops. Coils make frequency-sensitive resistors in AC circuits.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[c_01.png]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

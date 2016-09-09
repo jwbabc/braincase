@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<glossary>
+  <term>
+    <term_name>
+      <![CDATA[Lens]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>A lens organizes light. Light rays that hit the lens material (usually glass or acrylic) bend first when they pass into the lens and again when they pass out of the lens. Some lenses are positive lenses – they bend parallel rays of light so that they will converge at a point called the focal point.<p><img src="assets/xml/glossary/images/lens_01.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>Other lenses are negative lenses – they bend parallel rays of light so that they diverge.  The point the rays seem to diverge from is also called the focal point of the lens.<p><img src="assets/xml/glossary/images/lens_02.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Lens Formula]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The thin lens formula shows the relationship between the object distance (s1) and the image distance (s2) for a lens with focal length f. <img src="assets/xml/glossary/images/thin_lens_forumla.png" hspace="3" vspace="0" /></p><p><br /><br /><br />The size of the image is given by the simple relationship.</p><p><img src="assets/xml/glossary/images/thin_lens_relationship.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+    <description>
+      <![CDATA[</p>This shows that the further the object is away from the lens, the closer the image is to the lens – as long as the object distance s1 is greater than the focal length f.</p><p><img src="assets/xml/glossary/images/lens_formula_01.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Pinhole]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>A pinhole organizes light. Many light rays will hit a plate, but only light rays that hit a small hole in the plate will pass through.</p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>A pinhole placed between a bright object and a screen will form an image of the object on the screen, though the image may be dim if the pinhole is small. A smaller pinhole provides a sharper but dimmer image. An image formed by a small pinhole is always in focus, no matter how close or far away it is.</p><p><img src="assets/xml/glossary/images/pinhole_01.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Aperture]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>An aperture is a hole through which light travels. The aperture of a lens can be the whole lens. Often the aperture is reduced by an opaque mask or iris to reduce the amount of light that passes through the lens.</p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>A reduced aperture reduces some focus and color distortions that lenses create.</p><p><img src="assets/xml/glossary/images/aperture_01.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+    <description>
+    <![CDATA[<p>A small aperture makes a lens act more like a pinhole and will increase the “depth of field” of a lens. That is objects at a range of distances may all be in focus at a single image distance.</p><p><img src="assets/xml/glossary/images/aperture_02.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[f-Number]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The aperture of a lens or lens system is usually indicated by the f-number, which is the ratio between the focal length of the lens and the diameter of the aperture.  A lower f-number denominator indicates a larger aperture and a larger one shows that the aperture is smaller.<br><br>f /1.4 is a large aperture and f /16 is a small aperture.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Magnification]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>Magnification is the ratio between the size of the image to the size of the object. A 1:1 magnification means that the image is the same size as the object. A 1:4 magnification means that the image is 1/4 the size of the object.</p><p><img src="assets/xml/glossary/images/magnification_01.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+    <description>
+      <![CDATA[If you know the distances of the object and image from a lens or a pinhole, you can easily figure out the magnification.</p><p><img src="assets/xml/glossary/images/magnification_formula.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Eyepiece]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>In a microscope or telescope, the eyepiece is placed at, or close to, the focal point of the objective. The eyepiece then magnifies the image and projects it onto the viewer’s retina.</p><p><img src="assets/xml/glossary/images/eyepiece_01.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Objective]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>In optical systems with two or more lenses – such as microscopes and telescopes – the lens that is nearest the object is called the objective. Objectives can be single lenses or made out of two or more lenses mounted close together.</p><p><img src="assets/xml/glossary/images/eyepiece_01.png" hspace="0" vspace="0" /></p>]]>
+    </description>
+  </term>
+</glossary>

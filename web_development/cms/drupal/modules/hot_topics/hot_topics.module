@@ -1,0 +1,75 @@
+<?php
+/* ------ Drupal Hook Methods ------ */
+
+/**
+ * Implementation of hook_menu().
+ */
+function hot_topics_menu() {
+  $items['localize'] = array(
+		'page callback' => 'localize_user_setAffiliateByURL',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+	);
+  $items['get_most_viewed'] = array(
+		'page callback' => 'hot_topics_getMostViewed',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+	);
+  
+	return $items;
+}
+
+/**
+ * Implementation of hook_block().
+ */
+function hot_topics_block ($op='list', $delta=0) {
+  // Initialize the base path to the application
+  global $base_path;
+  
+  // Create the local hub and localization blocks
+  $block = array();
+  
+  switch ($op) {
+    case 'list' :
+      $block[0]['info'] = t('Hot Topics');
+      return $block;
+      break;
+    case 'view' :
+      // Init the output string for the block
+      $blockContent = "";
+      
+      switch ($delta) {
+        // Hot Topics Block
+        case 0:
+          $blockContent .= '<h6>hot topics</h6>';
+          $blockContent .= '<p></p>';
+          $blockContent .= '<div id="tab" class="tab_content">';
+          $blockContent .=   '<ol>';
+          $blockContent .=   '</ol>';
+          $blockContent .= '</div>';
+
+          $block['subject'] = t('');
+          $block['content'] = $blockContent;
+          break;
+      }
+      return $block;
+      break;
+  }
+}
+
+function hot_topics_getMostViewed () {
+  if ($node->title) {
+    $terms = array();
+    $terms = getTaxonomyTermsByNodeTitle($node->title);
+  }
+ 
+  // Get all articles for the channel
+  if ($terms) {
+    $view = getViewByName('get_top_4_articles', $terms, 4);
+  } else {
+    $view = getViewByName('get_top_4_articles', null, 4);
+  }
+  
+  $articles_mostViewed = array();
+  $articles_mostViewed = $view->result;
+}

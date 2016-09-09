@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- The title attribute is the title that appears on the experiment selection screen. -->
+<!-- The value for the timeout attribute is in seconds. -->
+<lab_companion topic="Electric circuit" timeout="180">
+  <intro_text filename="flow.swf">
+    <![CDATA[<p>Voltage is the electrical push or pressure that causes electrically charged particles to flow through a circuit. Electric current is the flow of electrically charged particles through a circuit. Electrical resistance is the opposition of a material or device to the flow of electric current.<br /><br />A water system makes a good analogy to electricity.<br /><br />Voltage corresponds to the water pressure.<br /><br />Current corresponds to the water flow.<br /><br />Resistance corresponds to restrictions in the pipe that slow the flow.<br /><br />Notice that in this simple circuit, the current is the same everywhere.</p>]]>
+  </intro_text>
+  <intro_text>
+    <![CDATA[]]>
+  </intro_text>
+  <experiment filename="make_a_dc_circuit.xml">
+    <![CDATA[<p>Make a DC circuit</p>]]>
+  </experiment>
+  <experiment filename="diodes_and_leds.xml">
+    <![CDATA[<p>Diodes and LEDs</p>]]>
+  </experiment>
+  <experiment filename="make_an_ac_circuit.xml">
+    <![CDATA[<p>Make an AC circuit</p>]]>
+  </experiment>
+  <experiment filename="ac_motors.xml">
+    <![CDATA[<p>AC motors</p>]]>
+  </experiment>
+  <experiment filename="get_to_know_the_oscilloscope.xml">
+    <![CDATA[<p>Get to know the oscilloscope</p>]]>
+  </experiment>
+  <experiment filename="dc_finger_and_fan_experiment.xml">
+    <![CDATA[<p>Advanced:<br />DC finger and fan experiment</p>]]>
+  </experiment>
+  <experiment filename="capacitors_and_resistors.xml">
+    <![CDATA[<p>Advanced:<br />Capacitors and resistors</p>]]>
+  </experiment>
+  <experiment filename="coils.xml">
+    <![CDATA[<p>Advanced:<br />Coils</p>]]>
+  </experiment>
+  <experiment filename="ac_to_dc.xml">
+    <![CDATA[<p>Advanced:<br />Converting AC to DC</p>]]>
+  </experiment>
+  <experiment filename="resources.xml">
+    <![CDATA[<p>Advanced:<br />Resources</p>]]>
+  </experiment>
+</lab_companion>

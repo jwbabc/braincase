@@ -1,0 +1,28 @@
+.instructions {
+  color:#000000;
+  fontFamily: Arial;
+  fontWeight:Normal;
+  fontSize: 12;
+  textAlign: center;
+}
+
+.category {
+  color:#000000;
+  fontFamily: Arial Bold;
+  fontSize: 11;
+  letterSpacing: .75;
+}
+
+.accessory-name {
+  color:#000000;
+  fontFamily: Arial Bold;
+  fontSize: 11;
+  textAlign: center;
+}
+
+.accessory-price {
+  color:#000000;
+  fontFamily: Arial Bold;
+  fontSize: 10;
+  textAlign: center;
+}

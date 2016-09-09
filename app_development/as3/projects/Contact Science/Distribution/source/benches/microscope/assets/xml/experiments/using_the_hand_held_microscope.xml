@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Using the hand-held microscope</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Turn the video switch to “Hand-Held Microscope” and place the microscope so it rests directly on part of your clothing.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htuhhm_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htuhhm_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Press the microscope down or lift it very slightly until you see a sharp image on the monitor.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htuhhm_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htuhhm_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Explore the different weaves and materials of your clothing. Can you tell how cotton, wool, polyester, and nylon differ?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htuhhm_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htuhhm_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Explore the skin on your hands, arms, and face. If you look at the palm of your hand, you may be able to see tiny droplets of perspiration suddenly appear and then slowly disappear.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htuhhm_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htuhhm_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Use this microscope to examine other objects around you or in your pockets.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htuhhm_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htuhhm_05.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>The hand held microscope has two lenses that focus a magnified image directly on the sensor of a digital camera. A ring of LEDs around the objective lens illuminate the specimen. The lenses are arranged so that they focus just at the end of the camera. This microscope has a magnification of about 50X.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htuhhm_07.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[hh_camera.png]]>
+  </activity>
+</experiment>

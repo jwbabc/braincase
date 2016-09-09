@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Capacitors, and Resistors</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Resistors reduce the flow of electricity in a circuit. Build a circuit with a wire, switch, and lamp bulb. Make sure the lamp lights and observe how bright it is. Now add a 5 ohm resistor between the switch and the lamp bulb. Does the lamp still light? How bright is it?  Does the circuit with a resistor draw as much current as the one without?<br /><br />Capacitors store electricity temporarily. As you watch the ammeter, connect the capacitor block across the DC power supply. Notice that the ammeter suddenly reads a high current but begins to fall immediately till it shows no current flowing. Now take the “charged” capacitor away from the power supply and connect both ends to both ends of the DC motor. Does the motor begin to spin? Capacitors of the right size can pass AC current, behaving just like wires. Try using the capacitor block instead of a wire in an AC circuit.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+    <video>
+      <![CDATA[car_01.png]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

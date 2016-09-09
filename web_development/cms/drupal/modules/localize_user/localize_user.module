@@ -1,0 +1,620 @@
+<?php
+/* ------ Drupal Hook Methods ------ */
+/**
+ * Implementation of drupal_add_css() and drupal_add_js().
+ */
+// Initialize the base path to the module
+$module_path = drupal_get_path('module', 'localize_user');
+// Add the css file to the drupal page head
+drupal_add_css($module_path.'/css/localization-blocks.css', 'module', 'all');
+// Add the js file for populating the login blocks
+drupal_add_js($module_path.'/js/localization-blocks.js');
+
+// Get the Affiliate/DMA information
+$affiliate = array();
+$affiliate = localize_user_getAffiliateCookie();
+
+/**
+ * Implementation of hook_menu().
+ */
+function localize_user_menu() {
+  $items['localize'] = array(
+		'page callback' => 'localize_user_setAffiliateByURL',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+	);
+  $items['get_local_hub_copy'] = array(
+		'page callback' => 'localize_user_getAffiliateLocalHubText',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+	);
+  
+	return $items;
+}
+
+/**
+ * Implementation of hook_block().
+ */
+function localize_user_block ($op='list', $delta=0) {
+  // Initialize the base path to the application
+  global $base_path;
+  // Initialize the base path to the module
+  $module_path = drupal_get_path('module', 'localize_user');
+  
+  // Create the local hub and localization blocks
+  $block = array();
+  
+  switch ($op) {
+    case 'list' :
+      $block[0]['info'] = t('Localization Block');
+      $block[1]['info'] = t('Local Hub Block');
+      return $block;
+      break;
+    case 'view' :
+      // Init the output string for the blocks
+      $blockContent = "";
+      
+      switch ($delta) {
+        // Localization block near login area
+        case 0:
+          switch ($affiliate) {
+            case TRUE:
+              $blockContent .= '<div id="localization-block">';
+              $blockContent .=   '<div id="affiliates">';
+              $blockContent .=   '</div>';
+              $blockContent .= '</div>';
+              break;
+            case FALSE:
+              $blockContent .= '<div id="localization-block">';
+              $blockContent .=   '<div id="affiliates">';
+              $blockContent .=     '<div id="img-container">';
+              $blockContent .=       '<a href="http://www.pbs.org" target="_blank">';
+              $blockContent .=         '<img src="'.$base_path.$module_path.'/img/pbs-logo.png" />';
+              $blockContent .=       '</a>';
+              $blockContent .=     '</div>';
+              $blockContent .=   '</div>';
+              $blockContent .= '</div>';
+              break;
+          }
+
+          $block['subject'] = t('');
+          $block['content'] = $blockContent;
+          break;
+        // Local Hub block
+        case 1:
+          switch ($affiliate) {
+            case TRUE:
+              $blockContent .= '<h6>local hub</h6>';
+              $blockContent .= '<h4></h4>';
+              $blockContent .= '<p class="local-hub-copy"></p>';
+              $blockContent .= '<div class="stations">';
+              $blockContent .=   '<a href="'.$base_path.'affiliates">CHOOSE YOUR STATION</a>';
+              $blockContent .= '</div>';
+              break;
+            case FALSE:
+              $blockContent .= '<h6>local hub</h6>';
+              $blockContent .= '<h4>';
+              $blockContent .=   '<a href="http://www.pbs.org" target="_blank">';
+              $blockContent .=     '<img src="'.$base_path.$module_path.'/img/pbs-logo.png" />';
+              $blockContent .=     '<p>PBS</p>';
+              $blockContent .=   '</a>';
+              $blockContent .= '</h4>';
+              $blockContent .= '<p class="local-hub-copy"><b><i>Next Avenue</i></b> is a service of public television stations across the country. Click <a href="'.$base_path.'affiliates">here</a> to get local information and insight from your area public television station.</p>';
+              $blockContent .= '<div class="stations">';
+              $blockContent .=   '<a href="'.$base_path.'affiliates">CHOOSE YOUR STATION</a>';
+              $blockContent .= '</div>';
+              break;
+          }
+
+          $block['subject'] = t('');
+          $block['content'] = $blockContent;
+          break;
+      }
+      return $block;
+      break;
+  }
+}
+/* ------ Isolated Methods ------ */
+
+/**
+ * localize_user_getAffiliateLocalHubText method
+ * Returns the current local hub copy to the user.
+ * We use AJAX to bypass the page caching in the application.
+ * 
+ * @return json A JSON array of the copy for the local hub 
+ */
+function localize_user_getAffiliateLocalHubText () {
+  $nodeId = (string) $_GET['nid'];
+  
+  $sql = "
+    SELECT
+      vid,
+      nid,
+      field_local_hub_copy_value
+    FROM
+      content_type_affiliate
+    WHERE
+      nid = %d
+    ORDER BY
+      vid DESC
+    LIMIT 1";
+  
+  $result = db_query($sql, $nodeId);
+  
+  $localHubCopy = (object) array();
+  $localHubCopy = db_fetch_object($result);
+  
+  $json = json_encode($localHubCopy);
+  echo $json;
+}
+
+/* ------ Module Methods ------ */
+
+/**
+ * localize_user_getAffiliateCookie method
+ * Searches for the affiliate cookie on the client, if found, the cookie is returned.
+ * If not found, inits the process of creating the cookie and storing the geolocation data.
+ *
+ * @return mixed If found returns the array of affiliate data used for localization. Returns false if none are found.
+ */
+function localize_user_getAffiliateCookie () {
+  $affiliate = array();
+  
+  // Check if a cookie exists for a registered affiliate
+  if($_COOKIE["na_affiliate"]){
+    return TRUE;
+  } else {
+    // Set the cookie for the affiliate
+    $affiliate['data'] = localize_user_setAffiliate ();
+    return TRUE;
+  }
+};
+
+/**
+ * localize_user_getZipIPPairFromAPIByIP method
+ * Uses the IPInfoDB API to retreive a Zip Code/IP pair from their web service.
+ * 
+ * Searches the geolocation table for a matching IP, if found, that information is returned.
+ * If no match is found, we use the IPInfoDB API to retrieve the geolocation information for the IP.
+ * Learn more at http://ipinfodb.com/ip_location_api.php
+ * This information is then stored in the geolocation table, and returned.
+ *
+ * @param string $ip The IP Address of the user
+ *
+ * @return object The geolocation data for the IP Address
+ */
+function localize_user_getZipIPPairFromAPIByIP ($ip = '') {
+  if ($ip === '') {
+    drupal_set_message (t('Invalid IP was sent to localize_user_getZipIPPairFromAPIByIP'), 'error');
+  } else {
+    // If the ip address exists in the DB, retrieve the record and return it
+    $ipExists = localize_user_getZipIpPairByIP($ip);
+    $userData = array();
+    
+    if ($ipExists) {
+      // Get the geoLocation data for the user from the DB
+      $userData = localize_user_getZipIpPairRecordByIP($ip);
+      
+      if ($userData) {
+        return $userData;
+      } else {
+        return FALSE;
+      }
+    } else {
+      // Initialize the base path to the module
+      $module_path = drupal_get_path('module', 'localize_user');
+      // Include the IPInfoDB API
+      require_once ($module_path.'/lib/ip2locationlite.class.php');
+      // Init the API object
+      $ipLite = new ip2location_lite;
+      $ipLite->setKey('067eea0b8aa4e207c16503a77a832267ce1ddf17f82f21784539ef6f37425f9c');
+      // Call the API
+      $geoLocationData = $ipLite->getCity($ip);
+      $errors = $ipLite->getError();
+      // Return the geoLocation data, unless errors occur, if so, return errors
+      if ($geoLocationData['statusCode'] == 'OK') {
+        // Save the geoLocation data from the API to the DB
+        $userData = localize_user_setGeoLocation($geoLocationData);
+        return $userData;
+      } else {
+        return $errors;
+      }
+    }
+  }
+};
+
+/**
+ * localize_user_getZipIpPairByIP method
+ * Checks to see if a record for the IP address exists in the DB.
+ * If found, the geolocation data is returned for that address.
+ * 
+ * @param string $ip The IP Address of the user
+ *
+ * @return mixed If found, returns the key of the array. If not found, returns false
+ */
+function localize_user_getZipIpPairByIP ($ip = '') {
+  if($ip === '') {
+    drupal_set_message (t('Invalid IP was sent to localize_user_getZipIpPair'), 'error');
+  } else {
+    // Convert the IP to the format stored in the DB
+    $ip = (int) ip2long($ip);
+    
+    $sql = "
+      SELECT
+        *
+      FROM
+        localize_user_geolocation
+      WHERE
+        ip = %d";
+
+    $result = db_query($sql, $ip);
+
+    $geoLocationData = array();
+
+    while ($row = db_fetch_object($result)) {
+      $geoLocationData = $row;
+    }
+    
+    if ($geoLocationData) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+};
+
+/**
+ * localize_user_getZipIpPair method
+ * Searches a multi-dimensional array for a key-value pair
+ *
+ * @param array $needles The array of terms to be searched for (can be a string or int)
+ *
+ * @return mixed If found, returns the key of the array. If not found, returns false
+ */
+function localize_user_getZipIpPairRecordByIP ($ip = '') {
+  if($ip === '') {
+    drupal_set_message (t('Invalid IP was sent to localize_user_getZipIpPair'), 'error');
+  } else {
+    // Convert the IP to the format stored in the DB
+    $ip = (int) ip2long($ip);
+    
+    $sql = "
+      SELECT
+        *
+      FROM
+        localize_user_geolocation
+      WHERE
+        ip = %d";
+
+    $result = db_query($sql, $ip);
+
+    $geoLocationData = array();
+
+    while ($row = db_fetch_object($result)) {
+      $geoLocationData[] = $row;
+    }
+    
+    if ($geoLocationData) {
+      return $geoLocationData;
+    } else {
+      return FALSE;
+    }
+  }
+};
+
+/**
+ * localize_user_setAffiliate method
+ * Sets the cookie for the affiliate, and stores data in the DB
+ * 
+ * Retrieves the user's IP Address.
+ * Using this IP Address, it quries the IPInfoDB API to retreive the geolocation data.
+ * Once the geolocation data is retrieved, it places this data in the DB.
+ * Using the zip code from the geolocation data we retrieve the DMAs that contain that zip code.
+ * Using the DMA, we then find the affiliate associated with that DMA.
+ * Once the affiliate is found, we retreive the node data for the affiliate.
+ * We then use the node data to contruct the cookie and place the information in the DB.
+ *
+ * @return boolean If the affiliate cookie was successfully set
+ */
+function localize_user_setAffiliate () {
+  // FOR TESTING ONLY!!!
+  $ip = '156.98.11.253';
+  // Get the user's IP
+  //$ip = localize_user_getUserIp ();
+  // Call the API to retreive Zip Code / IP pair
+  $userData = array();
+  $userData = localize_user_getZipIPPairFromAPIByIP($ip);
+  
+  if ($userData) {
+    // FOR TESTING ONLY!!!
+    // 0 affiliate results
+    //$zipCode = '%11111%';
+    // 1 affiliate result
+    //$zipCode = '%84744%';
+    // Multiple affiliate results
+    $zipCode = '%55417%';
+    
+    //$zipCode = '%'.$userData[0]->zip_code.'%';
+
+    // Use the data to determine the station based on DMA/Zip Code pair
+    $sql = "
+      SELECT
+        ctd.nid dma_nid,
+        cfd.nid affiliate_nid
+      FROM
+        content_type_dma ctd,
+        content_field_dmas cfd,
+        node n
+      WHERE
+        ctd.field_zip_code_value LIKE ('%s') AND
+        ctd.nid = cfd.field_dmas_nid AND
+        cfd.nid = n.nid AND
+        n.status = 1";
+
+    $result = db_query($sql, $zipCode);
+
+    $affiliateNodeIds = array();
+
+    while($row = db_fetch_object($result)) {
+      $affiliateNodeIds[] = $row;
+    }
+    
+    // Based on the amount of affiliates returned...
+    switch (count($affiliateNodeIds)) {
+      case 0 :
+        // Localize the user to the PBS affiliate
+        $sql = "
+          SELECT
+            node.nid
+          FROM
+            node
+          WHERE
+            node.title = '%s'
+          LIMIT 1";
+        
+        $result = db_query($sql, 'PBS');
+        
+        $affiliateNodeIds = array();
+        
+        while($row = db_fetch_object($result)) {
+          $affiliateNodeIds = $row;
+        }
+        
+        // Load the node object for the affiliate
+        $affiliateNode = (object) array();
+        $affiliateNode = node_load($affiliateNodeIds->nid, NULL, TRUE);
+        // Set the data in the data table
+        localize_user_setData($affiliateNode, 0);
+        // Set the cookie for the affiliate
+        localize_user_setAffiliateCookie($affiliateNode);
+        break;
+        
+      case 1 :
+        // Localize the user to the affiliate
+        // Load the node object for the affiliate
+        $affiliateNode = (object) array();
+        $affiliateNode = node_load($affiliateNodeIds[0]->affiliate_nid, NULL, TRUE);
+        // Set the data in the data table
+        localize_user_setData($affiliateNode, 0);
+        // Set the cookie for the affiliate
+        localize_user_setAffiliateCookie($affiliateNode);
+        break;
+      
+      default :
+        global $base_url;
+        global $base_path;
+        
+        // Generate the array of affiliate information used for the dialog box
+        $affiliateData = array();
+        
+        foreach ($affiliateNodeIds as $item) {
+          // Load the node object for the affiliate
+          $affiliateNode = node_load($item->affiliate_nid, NULL, TRUE);
+          // Retrieve the call letters for the affiliate
+          $affiliateId = strtolower($affiliateNode->field_affiliate_id[0]['value']);
+          // Construct the data for the affiliate array
+          $affiliateData[$affiliateId]['name'] = $affiliateNode->title;
+          $affiliateData[$affiliateId]['localizeURL'] = '/localize?id='.$affiliateId;
+          $affiliateData[$affiliateId]['logoPath'] = $base_url.$base_path.$affiliateNode->field_logo_medium[0]['filepath'];
+          unset ($affiliateNode);
+        }
+        
+        $data = array();
+        $data['affiliates']['data'] = $affiliateData;
+        $data['affiliates']['chooseBtn'] = '<a href="'.$base_path.'affiliates">CHOOSE YOUR STATION</a>';
+        
+        // display the dialog box with the choices of affiliates
+        // Initialize the base path to the module
+        $module_path = drupal_get_path('module', 'localize_user');
+        // Add the JSON array of affiliates in-line to the DOM
+        drupal_add_js($data, 'setting');
+        // Add the js to display the dialog box
+        drupal_add_js($module_path.'/js/localization-choose.js');
+        break;
+    }
+
+  } else {
+    drupal_set_message (t('No user data available for IP address sent to localize_user_setAffiliate'), 'error');
+  }
+};
+
+/**
+ * localize_user_setAffiliateCookie method
+ * Creates and sets the cookie for the chosen affiliate
+ * 
+ * @return none
+ */
+function localize_user_setAffiliateCookie ($affiliateNode) {
+  if ($affiliateNode->nid) {
+    // Unset the current affiliate cookie if it exists
+    if ($_COOKIE['na_affiliate']) {
+      setcookie($_COOKIE['na_affiliate'],'',time()-3600);
+    }
+    
+    // Prep data for storage in a cookie
+    $affiliateData = array();
+    $affiliateData['nid'] = $affiliateNode->nid;
+    $affiliateData['name'] = $affiliateNode->title;
+    $affiliateData['callLetters'] = $affiliateNode->field_affiliate_id[0]['value'];
+    $affiliateData['small'] = $base_path.$affiliateNode->field_logo_small[0]['filepath'];
+    $affiliateData['small_url'] = $affiliateNode->field_url[0]['url'];
+    $affiliateData['icon'] = $base_path.$affiliateNode->field_logo_icon[0]['filepath'];
+    
+    // Check if the affiliate's logos are co-branded
+    if ($affiliateNode->field_cobranded[0]['value'] === '1') {
+      $affiliateData['co_branded'] = TRUE;
+    } else {
+      $affiliateData['co_branded'] = FALSE;
+    }
+
+    // Set cookie for 1 year (you can set this to whatever you wish)
+    $data = json_encode($affiliateData);
+    setcookie('na_affiliate', $data, time()+3600*24*365);
+  } else {
+    drupal_set_message (t('No affiliate node object sent to localize_user_setAffiliateCookie'), 'error');
+  }
+}
+
+/**
+ * localize_user_setAffiliateByURL method
+ * Uses a string sent as GET to localize the user to a particular affiliate.
+ * 
+ * The user's geolocation and localization information is stored in the DB.
+ * The affiliate cookie is created and set.
+ * User is then redirected back to the front page.
+ * 
+ * @return none
+ */
+function localize_user_setAffiliateByURL () {
+  // Set the call letters from GET
+  $callLetters = (string) $_GET['id'];
+  
+  $sql = "
+    SELECT
+      node.nid
+    FROM
+      node
+    
+    LEFT JOIN 
+      content_type_affiliate node_data_field_affiliate_id
+    ON
+      node.vid = node_data_field_affiliate_id.vid
+    
+    WHERE
+      node.status = 1 AND
+      node_data_field_affiliate_id.field_affiliate_id_value = '%s'
+    LIMIT 1";
+  
+  $result = db_query($sql, $callLetters);
+  
+  $match = (object) array();
+  $match = db_fetch_object($result);
+  
+  $affiliateNode = node_load($match->nid, NULL, TRUE);
+  // Set the data in the data table
+  localize_user_setData($affiliateNode, 1);
+  // Set the cookie for the affiliate
+  localize_user_setAffiliateCookie($affiliateNode);
+  // Redirect to the front page
+  drupal_goto();
+}
+
+/**
+ * localize_user_setData method
+ * Searches a multi-dimensional array for a key-value pair
+ *
+ * @param array $needles The array of terms to be searched for (can be a string or int)
+ *
+ * @return mixed If found, returns the key of the array. If not found, returns false
+ */
+function localize_user_setData ($affiliateData, $op) {
+  if ($affiliateData->nid) {
+    // Get the last insert id for the geolocation table
+    $insertId = db_last_insert_id('localize_user_geolocation', 'localize_user_geolocation_id');
+    // If an insertId is not found, add an IP record to the geolocation table and use its insertId
+    if ($insertId) {
+      //
+    } else {
+      // Get the user's IP
+      $ip = localize_user_getUserIp ();
+      $userData = localize_user_getZipIpPairRecordByIP ($ip);
+      // Get the last insert id from $userData
+      $insertId = $userData[0]->localize_user_geolocation_id;
+    }
+    
+    // Get the http referrer for the user
+    $httpReferrer = $_SERVER['HTTP_REFERER'];
+    // Create a UNIX timestamp for the current time
+    $timestamp = time();
+    // Map the geoLocation and other data to the data object for insertion into the DB
+    $data = (object) array();
+    $data->localize_user_geolocation_id = $insertId;
+    $data->type = $op;
+    $data->affiliate = $affiliateData->title;
+    $data->http_referrer = $httpReferrer;
+    $data->created = $timestamp;
+    
+    // Insert the record into the DB
+    $result = drupal_write_record('localize_user_data', $data);
+  } else {
+    drupal_set_message (t('Invalid data sent to localize_user_setData'), 'error');
+  }
+};
+
+/**
+ * localize_user_setGeoLocation method
+ * Searches a multi-dimensional array for a key-value pair
+ *
+ * @param array $needles The array of terms to be searched for (can be a string or int)
+ *
+ * @return mixed If found, returns the key of the array. If not found, returns false
+ */
+function localize_user_setGeoLocation ($geoLocationData = array()) {
+  if ($geoLocationData) {
+    // Get the current user object from drupal
+    global $user;
+    // Prep the IP Address for storage in the DB
+    $ip = $geoLocationData['ipAddress'];
+    $ip = (int) ip2long($ip);
+    // Create a UNIX timestamp for the current time
+    $timestamp = time();
+    // Map the geoLocation and other data to the data object for insertion into the DB
+    $data = (object) array();
+    $data->uid = $user->uid;
+    $data->ip = $ip;
+    $data->latitude = $geoLocationData['latitude'];
+    $data->longitude = $geoLocationData['longitude'];
+    $data->zip_code = $geoLocationData['zipCode'];
+    $data->created = $timestamp;
+    
+    // Insert the record into the DB
+    $result = drupal_write_record('localize_user_geolocation', $data);
+  } else {
+    drupal_set_message (t('Invalid data sent to localize_user_setGeoLocation'), 'error');
+  }
+};
+
+/* ------ Utility Methods ------ */
+
+/**
+ * localize_user_getUserIp method
+ * Finds the user's IP Address and returns it
+ *
+ * @return string The IP Address of the user
+ */
+function localize_user_getUserIp () {
+  // Test if it is a shared client
+  if (empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip = $_SERVER['REMOTE_ADDR'];
+  } else {
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+  }
+  // Is it a proxy address
+  if (empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['REMOTE_ADDR'];
+  } else {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+  }
+  
+  return $ip;
+};

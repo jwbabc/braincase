@@ -1,0 +1,7 @@
+name = "Registration Defaults"
+description = "User Registration form alter for defaults on profile module fields."
+package = Custom
+
+version = "6.x-1.0"
+core = "6.x"
+project = "Next Avenue"

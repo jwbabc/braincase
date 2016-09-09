@@ -1,0 +1,112 @@
+<?php
+function localize_user_schema() {
+  $schema['localize_user_geolocation'] = array(
+    'description' => t('Localization data for localize_user module'),
+    'fields' => array(
+      'localize_user_geolocation_id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'uid' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'ip' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'latitude' => array(
+        'type' => 'numeric',
+        'not null' => TRUE,
+        'precision' => '18',
+        'scale' => '12',
+      ),
+      'longitude' => array(
+        'type' => 'numeric',
+        'not null' => TRUE,
+        'precision' => '18',
+        'scale' => '12',
+      ),
+      'zip_code' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'created' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('localize_user_geolocation_id'),
+    'mysql_suffix' => "ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Geolocation data for localize_user module' AUTO_INCREMENT=1"
+  );
+  
+  $schema['localize_user_data'] = array(
+    'description' => t('Auto IP localization data for localize_user module'),
+    'fields' => array(
+      'localize_user_data_id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'localize_user_geolocation_id' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'type' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'affiliate' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'http_referrer' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'created' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('localize_user_data_id'),
+    'mysql_suffix' => "ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Auto IP localization data for localize_user module' AUTO_INCREMENT=1"
+  );
+  
+  return $schema;
+}
+
+function localize_user_install() {
+  // Add the table used by the module
+  switch ($GLOBALS['db_type']) {
+    case 'mysql':
+    case 'mysqli':
+      drupal_install_schema('localize_user');
+      break;
+  }
+}
+
+function localize_user_uninstall() {
+  // Remove the table used by the module
+  drupal_uninstall_schema('localize_user');
+  
+  cache_clear_all('*', 'cache', TRUE);
+  cache_clear_all('*', 'cache_filter', TRUE);
+  cache_clear_all('*', 'cache_menu', TRUE);
+  cache_clear_all('*', 'cache_page', TRUE);
+}

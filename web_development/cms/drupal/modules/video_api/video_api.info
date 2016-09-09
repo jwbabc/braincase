@@ -1,0 +1,7 @@
+name = "Video API"
+description = "Generates lists of videos for the video portal of Next Avenue."
+package = Custom
+
+version = "6.x-1.0"
+core = "6.x"
+project = "Next Avenue"

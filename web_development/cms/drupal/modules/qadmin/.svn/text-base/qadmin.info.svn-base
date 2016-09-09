@@ -1,0 +1,6 @@
+; $Id$
+name = QAdmin
+description = Admin tool for the quiz show question sets
+version = 6.x
+core = 6.x
+package = Custom

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<image_stack>
+	<img>
+		<stats src="images/giza.swf" width="500" height="443" />
+		<desc>We’re used to seeing the famous Giza pyramids from ground level, but this image shows how they look from a satellite in space. You can see how civilization is edging nearer to the ancient structures, coming closer than 900 feet in some areas. The Great Pyramid is on the right. To the right of that is the Eastern Cemetery, with the Great Sphinx below and slightly to the left of there. (Image courtesy of Google Pro Earth)</desc>
+	</img>
+	<img>
+		<stats src="images/karnak.swf" width="489" height="500" />
+		<desc>This image shows the main section of the Karnak Temple complex, the Precinct of Amunre. It is the only temple precinct open to the public. You can see the gigantic columns from the Great Hypostle Hall slightly to the left and above the center of the image. The large dark rectangle below and right of center is the Sacred Lake. (Image courtesy of Google Pro Earth)</desc>
+	</img>
+	<img>
+		<stats src="images/luxor.swf" width="500" height="442" />
+		<desc>This image shows the Valley of the Kings, the site of burial tombs for many of Egypt’s pharaohs and nobles. Located on the west bank of the Nile River across from Luxor in middle Egypt, the site holds more than 60 tombs of royal leaders, including King Tut. You can see many of the tomb entrances leading into the hillsides in this aerial image. (Image courtesy of Google Pro Earth)</desc>
+	</img>
+	<img>
+		<stats src="images/medinet_habu.swf" width="500" height="429" />
+		<desc>This 2008 image shows a large number of unexcavated sites around Medinet Habu – the mortuary temple of King Ramses III on the west bank of Luxor in central Egypt. While the main temple structure was discovered in the late 1800s, archaeological work on the surrounding structures began in 1924 and continues to this day. (Image courtesy of Google Pro Earth)</desc>
+	</img>
+	<img>
+		<stats src="images/tell_tebilla.swf" width="500" height="429" />
+		<desc>This aerial image comes from a site, Tell Tebilla, in the Nile delta region of Egypt. Taken in 2008, it reveals sub-surface structures first discovered through surface scraping work done in 2003. The large complex in the right-center section of the image is a modern-day water treatment plant. (Image courtesy of Google Pro Earth)</desc>
+	</img>
+</image_stack>

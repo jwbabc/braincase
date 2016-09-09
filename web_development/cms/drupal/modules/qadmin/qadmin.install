@@ -1,0 +1,50 @@
+<?php
+// $Id: qadmin.install 2204 2010-02-22 05:14:55Z bkennedy $
+
+/**
+ * @file
+ * File system, install, and uninstall hooks for qadmin.module.
+ */
+
+/**
+ * Implementation of hook_requirements().
+ *
+ * Creates the qadmin destination folder in the Drupal file system.
+ */
+function qadmin_requirements($phase) {
+  if ($phase == 'runtime') {
+    $qadmin_directory = file_create_path() .'/qadmin';
+    if (!file_check_directory($qadmin_directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
+      if (!is_dir($qadmin_directory)) {
+        $requirements['qadmin_directory'] = array(
+          'title' => $t('Qadmin Directory'),
+          'value' => $t('%p is not a directory or is not readable by the webserver.', array('%p' => $qadmin_directory)),
+          'severity' => REQUIREMENT_ERROR,
+        );
+      }
+      elseif (!is_writable($qadmin_directory)) {
+        $requirements['qadmin_directory'] = array(
+          'title' => $t('Qadmin Directory'),
+          'value' => $t('%p is not writeable by the webserver.', array('%p' => $qadmin_directory)),
+          'severity' => REQUIREMENT_ERROR,
+        );
+      }
+      else {
+        $requirements['qadmin_directory'] = array(
+          'title' => $t('Qadmin Directory'),
+          'value' => $t('An unknown error occured.'),
+          'description' => $t('An unknown error occured trying to verify %p is a directory and is writable.', array('%p' => $qadmin_directory)),
+          'severity' => REQUIREMENT_ERROR,
+        );
+      }
+    }
+    if (!is_writable(file_directory_temp())) {
+      $requirements['qadmin_directory'] = array(
+        'title' => $t('Qadmin Temp Directory'),
+        'value' => $t('%p is not writeable by the webserver.', array('%p' => file_directory_temp())),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+  return $requirements;
+}

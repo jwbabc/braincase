@@ -1,0 +1,4 @@
+.imagelens { cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGCQBAAAIwAbDJgTxgAAAABJRU5ErkJggg==) 1 1, pointer; }
+.testWrap { margin-left: 25px;margin-top:25px; }
+.imageWrap { width:384px; height:240px; position:relative; }
+.outerWrap { width:400px; height:300px; margin:0px auto; }

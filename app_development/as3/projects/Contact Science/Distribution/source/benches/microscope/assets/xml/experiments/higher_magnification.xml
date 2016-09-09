@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Higher magnification</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p> Put a specimen slide onto the stage of the Binocular Microscope and focus the image using the lens with the red line (4X) as described in How to Use the Binocular Microscope.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hm_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hm_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Adjust the distance between the microscope eyepieces so you can see through both of them at the same time.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hm_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hm_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Once you have your specimen centered and in focus, increase the magnification to see more detail.  Turn the nose ring above the objective lenses so that the 10X lens points at your slide.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hm_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hm_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>The specimen should stay pretty much in focus. You can adjust the fine focus by using the smaller knobs at the back of the microscope.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hm_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hm_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Twist the condenser wheel underneath the center of the stage to increase the sharpness of the image. The white line should match the size of the objective lens you are using – 4X, 10X, or 40X.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hm_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hm_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Try the 40X lens for an even higher magnification.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hm_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[hm_06.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Notice that the higher power lenses are closer to the specimen. Higher power lenses have a shorter working distance. Often 100X objective lenses are used with a drop of oil that connects the end of the lens and the cover slip of the slide.<br /><br />You can find the total magnification by multiplying the magnification of the objective lens times the magnification of the eyepiece lens.<br /><br />The eyepieces on this binocular microscope are 10X. So with a 10X objective, the specimen is magnified 10 x 10 = 100 times.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[hm_08.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[2lenses.swf]]>
+  </activity>
+</experiment>

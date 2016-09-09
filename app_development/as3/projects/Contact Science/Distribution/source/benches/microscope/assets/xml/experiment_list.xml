@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- The title attribute is the title that appears on the experiment selection screen. -->
+<!-- The value for the timeout attribute is in seconds. -->
+<lab_companion topic="Microscope" timeout="180">
+  <intro_text filename="intro.png">
+    <![CDATA[<p>The ability of a microscope to magnify small specimens depends on the ability of a lens to refract (bend) light. Typically, microscopes have two lens assemblies separated by a tube. The objective is located close to the specimen and the eyepiece is located close to the viewer’s eye.</p>]]>
+  </intro_text>
+  <intro_text>
+    <![CDATA[]]>
+  </intro_text>
+  <experiment filename="using_the_binocular_microscope.xml">
+    <![CDATA[<p>Using the binocular microscope</p>]]>
+  </experiment>
+  <experiment filename="higher_magnification.xml">
+    <![CDATA[<p>Higher magnification</p>]]>
+  </experiment>
+  <experiment filename="using_the_hand_held_microscope.xml">
+    <![CDATA[<p>Using the hand-held microscope</p>]]>
+  </experiment>
+  <experiment filename="make_your_own_slide.xml">
+    <![CDATA[<p>Make your own slide</p>]]>
+  </experiment>
+  <experiment filename="measuring_with_the_microscope_reticle.xml">
+    <![CDATA[<p>Measuring with the reticle</p>]]>
+  </experiment>
+  <experiment filename="measuring_with_the_microscope_ruler.xml">
+    <![CDATA[<p>Measuring with the ruler</p>]]>
+  </experiment>
+  <experiment filename="resources.xml">
+    <![CDATA[<p>Advanced:<br />Resources</p>]]>
+  </experiment>
+</lab_companion>

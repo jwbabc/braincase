@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Measuring with the reticle</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Turn the video switch to “Binocular Microscope.”</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmr_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the nose ring above the objective lenses so the short “finder” lens with the red line (4 X) is in front and clicks into place pointing straight down at the flat microscope stage.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmr_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Find the Ruled Stage Micrometer slide, place it on the microscope, and center it.  As you watch on the monitor, focus on the slide by using the coarse and fine focus knobs.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmr_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Adjust the distance between the microscope eyepieces so you can see through both of them at the same time.  Look for a fine scale through the right eyepiece. This is called a reticle.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmr_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the nose ring above the objective lenses so that the 10 X lens clicks into place.  Adjust the focus so that the rulings on the micrometer slide appear sharp on the monitor.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmr_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the reticle and move the slide so that the rulings line up with each other.  Write down the distance (in tenths of a millimeter) between 10 lines on the reticle. Divide your answer by 10.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmr_06.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Measure a specimen with the reticle and multiply it by the magnification from step 6.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_07.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[mwtmr_07.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>The scale on the micrometer slide is 2 mm long. It is divided into 20 parts, each one 0.1 mm wide.<br /><br />Using an eyepiece reticle is a precise way to measure the dimensions of objects on microscope slides.  Each combination of reticle and objective lens must be calibrated carefully.<br /><br />Reticles with circles and grids are used for measuring areas and for counting cells within a given area.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[mwtmr_08.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[reticle.jpg]]>
+  </activity>
+</experiment>

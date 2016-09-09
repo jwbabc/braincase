@@ -1,0 +1,19 @@
+h4 {
+  color:#ff0000;
+  fontFamily: Humana Sans ITC Bold;
+  fontSize: 36;
+}
+
+h2 {
+  color:#ff0000;
+  fontFamily: Proxima Nova;
+  fontSize: 36;
+}
+
+a:link  {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<productContent>
+  <product>
+    <name>Product 1</name>
+    <price>467.56</price>
+    <thumb>images/thumb1.png</thumb>
+    <categories>
+      <category>skidPlates</category>
+      <category>cargo</category>
+    </categories>
+    <info>/products/info/product1.aspx</info>
+  </product>
+  <product>
+    <name>Product 2</name>
+    <price>178.00</price>
+    <thumb>images/thumb2.png</thumb>
+    <categories>
+      <category>windProtection</category>
+    </categories>
+    <info>/products/info/product2.aspx</info>
+  </product>
+  <product>
+    <name>Product 3</name>
+    <price>1200.15</price>
+    <thumb>images/thumb3.png</thumb>
+    <categories>
+      <category>tracks</category>
+    </categories>
+    <info>/products/info/product3.aspx</info>
+  </product>
+  <product>
+    <name>Product 4</name>
+    <price>300.35</price>
+    <thumb>images/thumb4.png</thumb>
+    <categories>
+      <category>skidPlates</category>
+      <category>mirrors</category>
+      <category>tracks</category>
+    </categories>
+    <info>/products/info/product4.aspx</info>
+  </product>
+  <product>
+    <name>Product 5</name>
+    <price>467.56</price>
+    <thumb>images/thumb1.png</thumb>
+    <categories>
+      <category>skidPlates</category>
+      <category>cargo</category>
+    </categories>
+    <info>/products/info/product1.aspx</info>
+  </product>
+  <product>
+    <name>Product 6</name>
+    <price>178.00</price>
+    <thumb>images/thumb2.png</thumb>
+    <categories>
+      <category>windProtection</category>
+    </categories>
+    <info>/products/info/product2.aspx</info>
+  </product>
+  <product>
+    <name>Product 7</name>
+    <price>1200.15</price>
+    <thumb>images/thumb3.png</thumb>
+    <categories>
+      <category>tracks</category>
+    </categories>
+    <info>/products/info/product3.aspx</info>
+  </product>
+  <product>
+    <name>Product 8</name>
+    <price>300.35</price>
+    <thumb>images/thumb4.png</thumb>
+    <categories>
+      <category>skidPlates</category>
+      <category>mirrors</category>
+      <category>tracks</category>
+    </categories>
+    <info>/products/info/product4.aspx</info>
+  </product>
+</productContent>

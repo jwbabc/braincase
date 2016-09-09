@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<image_stack>
+	<img>
+		<stats src="images/1.jpg" width="500" height="508" />
+		<desc>Here’s a view of the temple and the entire surrounding area of Gebel Ghueita as seen by the Quickbird satellite. We’ll be zooming in on the squared-off section.</desc>
+	</img>
+	<img>
+		<stats src="images/2.jpg" width="500" height="508" />
+		<desc>This view zooms in on the temple site. We haven’t applied any special filters. We can only see structures on the surface.</desc>
+	</img>
+	<img>
+		<stats src="images/3.jpg" width="500" height="504" />
+		<desc>In this image, we sharpened the edges of the surface structures, and applied one filter that shows more surface detail.</desc>
+	</img>
+	<img>
+		<stats src="images/4.jpg" width="500" height="526" />
+		<desc>Here, we applied another filter to the image that helps bring out detail in buried structures, which archaeologists might want to investigate.</desc>
+	</img>
+</image_stack>

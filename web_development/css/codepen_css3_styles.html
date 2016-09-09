@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Some fun with CSS styles</title>
+    <link href="main.css" rel="stylesheet">
+    <style>
+      .wrapper {
+        margin: 0 auto;
+        position: relative;
+        width: 600px;
+        height: 1000px;
+      }
+
+      .wrapper .background-container1 {
+        background: 
+          url(http://www.publicdomainpictures.net/pictures/40000/velka/angry-natural.jpg) 
+          center 
+          center 
+          no-repeat;
+        height: 50%;
+        width: 100%;
+      }
+
+      .wrapper .background-container2 {
+        background:
+          /*linear-gradient(to right, red, yellow)*/
+          url(http://www.publicdomainpictures.net/pictures/10000/velka/group-of-turkish-men-871287502343p9fy.jpg) 
+          center 
+          center 
+          no-repeat;
+        height: 50%;
+        width: 100%;
+      }
+
+      .box {
+        background: gray;
+        box-shadow: 10px 10px 2px #CCCCCC, 2px 4px 4px #ff0000 inset;
+        -moz-box-shadow: 10px 10px 2px #CCCCCC, 2px 4px 4px #ff0000 inset;
+        -webkit-box-shadow: 10px 10px 2px #CCCCCC, 2px 4px 4px #ff0000 inset;
+        border-radius: 24px 10px 4px 12px;
+        height: 150px;
+        line-height: 150px;
+        opacity: 0.75;
+        position: absolute;
+        text-align: center;
+        top: 20%;
+        left: 20%;
+        width: 400px;
+      }
+
+      .box h1 {
+        font-family: sans-serif;
+        color: rgba(0, 0, 0, 0.50);
+        text-shadow: 4px 4px 2px #ce6a67;
+      }
+
+      .circle {
+        background: radial-gradient(circle at top left, aqua, blue);
+        /*background-color: hsla(130, 80%, 20%, 0.75);*/
+        border-radius: 50%;
+        height: 150px;
+        opacity: 0.90;
+        position: absolute;
+        top: 42%;
+        left: 36%;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class=wrapper>
+        <div class="box">
+          <h1>I have a shadow.</h1>
+        </div>
+        <div class="circle">
+        </div>
+        <div class="background-container1">
+        </div>
+        <div class="background-container2">
+        </div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

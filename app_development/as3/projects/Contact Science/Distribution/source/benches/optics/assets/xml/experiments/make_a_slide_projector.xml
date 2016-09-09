@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Make a slide projector</p>]]>
+  </title>
+  <step>
+    <text>
+      <![CDATA[<p>Position the lamp forward - pull the handle, like this...</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[msp_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[msp_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>If the lamp is dim, push the button until the lamp is bright.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[msp_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[msp_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the 35mm Slide on the bench in Zone 1.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[msp_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[msp_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Medium Focal Length Lens on the bench in Zone 2.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[msp_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[msp_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Screen on the bench near the edge of the table.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[msp_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[msp_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Slide the lens back and forth until the slide's image is in focus. Why do you think the slide's image is upside down?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[msp_07.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[msp_06.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>Explanation</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Why is the slide’s image upside down? Trace the light rays and you can see how this works. The light from the top part of the slide is refracted downward to the focal point, and forms an image of the upper part of the slide. Light from the lower part of the slide is refracted upward to the focal point forming an image higher up. The left and right sides are flipped in the same way. The result is an upside down and backward image!</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[msp_08.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[1lens.swf]]>
+  </activity>
+</experiment>

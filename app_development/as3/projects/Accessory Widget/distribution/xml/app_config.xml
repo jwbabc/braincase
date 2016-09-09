@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<appConfig>
+  <categories>
+    <category id="skidPlates"><![CDATA[SKID PLATES &amp; BUMPERS]]></category>
+    <category id="cargo"><![CDATA[CARGO]]></category>
+    <category id="windProtection"><![CDATA[WIND PROTECTION]]></category>
+    <category id="mirrors"><![CDATA[MIRRORS]]></category>
+    <category id="tracks"><![CDATA[TRACKS]]></category>
+  </categories>
+  <appContent>
+    <content id="select"><![CDATA[Select your items below.]]></content>
+    <content id="price"><![CDATA[PRICE]]></content>
+  </appContent>
+</appConfig>

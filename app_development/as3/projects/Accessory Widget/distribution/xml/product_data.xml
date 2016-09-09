@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<productContent>
+  <product>
+    <name><![CDATA[Product 1]]></name>
+    <price><![CDATA[467.56]]></price>
+    <thumb><![CDATA[images/thumb1.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[cargo]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product1.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 2]]></name>
+    <price><![CDATA[178.00]]></price>
+    <thumb><![CDATA[images/thumb2.png]]></thumb>
+    <categories>
+      <category><![CDATA[windProtection]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product2.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 3]]></name>
+    <price><![CDATA[1200.15]]></price>
+    <thumb><![CDATA[images/thumb3.png]]></thumb>
+    <categories>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product3.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 4]]></name>
+    <price><![CDATA[300.35]]></price>
+    <thumb><![CDATA[images/thumb4.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[mirrors]]></category>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product4.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 5]]></name>
+    <price><![CDATA[467.56]]></price>
+    <thumb><![CDATA[images/thumb1.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[cargo]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product1.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 6]]></name>
+    <price><![CDATA[178.00]]></price>
+    <thumb><![CDATA[images/thumb2.png]]></thumb>
+    <categories>
+      <category><![CDATA[windProtection]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product2.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 7]]></name>
+    <price><![CDATA[1200.15]]></price>
+    <thumb><![CDATA[images/thumb3.png]]></thumb>
+    <categories>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product3.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 8]]></name>
+    <price><![CDATA[300.35]]></price>
+    <thumb><![CDATA[images/thumb4.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[mirrors]]></category>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product4.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 9]]></name>
+    <price><![CDATA[467.56]]></price>
+    <thumb><![CDATA[images/thumb1.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[cargo]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product1.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 10]]></name>
+    <price><![CDATA[178.00]]></price>
+    <thumb><![CDATA[images/thumb2.png]]></thumb>
+    <categories>
+      <category><![CDATA[windProtection]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product2.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 11]]></name>
+    <price><![CDATA[1200.15]]></price>
+    <thumb><![CDATA[images/thumb3.png]]></thumb>
+    <categories>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product3.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 12]]></name>
+    <price><![CDATA[300.35]]></price>
+    <thumb><![CDATA[images/thumb4.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[mirrors]]></category>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product4.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 13]]></name>
+    <price><![CDATA[467.56]]></price>
+    <thumb><![CDATA[images/thumb1.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[cargo]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product1.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 14]]></name>
+    <price><![CDATA[178.00]]></price>
+    <thumb><![CDATA[images/thumb2.png]]></thumb>
+    <categories>
+      <category><![CDATA[windProtection]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product2.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 15]]></name>
+    <price><![CDATA[1200.15]]></price>
+    <thumb><![CDATA[images/thumb3.png]]></thumb>
+    <categories>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product3.aspx]]></info>
+  </product>
+  <product>
+    <name><![CDATA[Product 16]]></name>
+    <price><![CDATA[300.35]]></price>
+    <thumb><![CDATA[images/thumb4.png]]></thumb>
+    <categories>
+      <category><![CDATA[skidPlates]]></category>
+      <category><![CDATA[mirrors]]></category>
+      <category><![CDATA[tracks]]></category>
+    </categories>
+    <info><![CDATA[/products/info/product4.aspx]]></info>
+  </product>
+</productContent>

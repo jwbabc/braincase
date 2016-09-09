@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Some fun with CSS transitions</title>
+    <link href="main.css" rel="stylesheet">
+    <style>
+      figure img {
+        /*transform: skewX(15deg); */
+        /* transform: skewY(-15deg); */
+        /* transform: rotate(15deg); */
+        /* transform: translate(80px, 90px); */
+        /* transform: scale(.4); */
+  
+        transition-property: all;
+        transition-duration: 1.0s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+        opacity: 1.0;
+        width: 600px;
+      }
+
+      figure img:hover {
+        opacity: 0.6;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <figure>
+        <img src="http://www.publicdomainpictures.net/pictures/40000/velka/angry-natural.jpg" alt="A big storm" />
+      </figure>
+    </section>
+    <script src="main.js" ></script>
+  </body>
+</html>

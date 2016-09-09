@@ -1,0 +1,678 @@
+<?php
+// Set the path to the module
+$modulePath = drupal_get_path('module', 'video_api');
+// Include the COVE API
+require_once ($modulePath.'/lib/cove-api.class.php');
+
+/**
+ * Implementation of hook_menu().
+ */
+function video_api_menu() {
+  $items['portal/video/get'] = array(
+		'page callback' => 'video_api_get_video',
+		'type' => MENU_CALLBACK,
+    'access arguments' => array('access video api'),
+  );
+  
+  $items['admin/settings/video-portal-cache'] = array(
+    'title' => t('Video Portal Cache Settings'),
+    'description' => t('Clear the cached data for the Video Portal'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('video_api_admin'),
+    'access arguments' => array('clear video portal cache'),
+  );
+  
+	return $items;
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function video_api_perm() {
+	return array(
+    'access video api',
+    'clear video portal cache',
+  );
+}
+
+/* ------ Utility Methods ------ */
+/**
+ * video_api_convertSmartQuotes method
+ * Replaces smart quotes found in strings
+ *
+ * @param str $string The string to be cleaned
+ *
+ * @return str The cleaned string
+ */
+function video_api_convertSmartQuotes($string) {
+  $search = array(
+    chr(145), 
+    chr(146), 
+    chr(147), 
+    chr(148), 
+    chr(151)
+  );
+  
+  $replace = array(
+    '&lsquo;', 
+    '&rsquo;', 
+    '&ldquo;', 
+    '&rdquo;', 
+    '&mdash;'
+  ); 
+  
+  return str_replace($search, $replace, $string);
+}
+
+/**
+ * video_api_getTaxonomyTermIdsByNodeTitle method
+ * Returns the taxonomy terms for a channel by the title
+ * Arguments are returned as an array
+ *
+ * @param str $title The title of the node
+ *
+ * @return array The array of taxonomy ids for the channel
+ */
+function video_api_getTaxonomyTermIdsByNodeTitle ($title) {
+  $terms = array();
+  
+  // Construct the terms for the view
+  switch ($title) {
+    case "health & well-being" :
+      $terms[] = "10+11+20+38+39+46+68+79+91";
+      break;
+    case "money & security" :
+      $terms[] = "14+21+23+29+40+45+62+65+77+118+86+89+98+119+120";
+      break;
+    case "work & purpose" :
+      $terms[] = "13+36+55+100+114+116+117";
+      break;
+    case "living & learning" :
+      $terms[] = "121+22+30+47+132+83+99+102+104+108";
+      break;
+    case "caregiving" :
+      $terms[] = "9+15+28+33+37+42+95+110";
+      break;
+    default :
+      $term = array();
+      $term = taxonomy_get_term_by_name($title);
+      $terms[] = $term[0]->tid;
+      break;
+  }
+  
+  return $terms;
+}
+
+/**
+ * video_api_callCoveAPI method
+ * Calls the COVE API with the parameters sent in the string $url
+ *
+ * @param string $url The url with params sent to the COVE API
+ * 
+ * @return object The result of the call to the COVE API
+ */
+function video_api_callCoveAPI ($url) {
+  // Init a new COVE API connection
+  $api_id = "TPT-NextAvenue-22bc20d9-039f-42fa-9443-ebc0197050d2";
+  $api_secret = "3d5db55a-297c-4451-bfa4-5b8c3077ca59";
+  $cove = new COVE_API_Request($api_id, $api_secret);
+  // Make the request to the COVE API
+  $json = $cove->make_request($url);
+  
+  // Place the result set from the Cove API into $coveResponse
+  // TODO: This seems to take a large amount of memory to process, investigate.
+  $coveResponse = (object) array();
+  $coveResponse = json_decode($json);
+  
+  // Return the status of the COVE API to the caller
+  if ($json) {
+    return $coveResponse;
+  } else {
+    return FALSE;
+  }
+}
+
+/**
+ * video_api_generateVideoCategories method
+ * Constructs the COVE API video list for the Aging category 
+ * and the category/topic mapping for Next Avenue video categories
+ *
+ * @return boolean The success of the construction of the list and arrays
+ */
+function video_api_generateVideoCategories () {
+  global $naCategories;
+  global $coveAgingVideoArray;
+  
+  // Construct the category map for video taxonomy
+  // This is a mapping of Next Avenue's topics to PBS COVE video topics
+  // Unfortunately, this must be updated every time a new topic is added to Next Avenue's topics
+  $naCategories = array ();
+  $naCategories["health & well-being"] = array (
+    "Health & Wellness", 
+    "Health", 
+    "Science", 
+    "Health Science", 
+    "Public Health", 
+    "Medical", 
+    "Physics", 
+    "Psychology", 
+    "Sports & Fitness", 
+    "Mental Health", 
+    "Biology", 
+    "Chemistry", 
+    "Pharmacology", 
+    "Diet & Nutrition", 
+    "Sexuality", 
+    "Sports & Recreation", 
+    "Aging", 
+    "Architecture", 
+    "Alternative Medicine"
+  );
+  $naCategories["aging, vitality & longevity"] = array (
+    "Aging", 
+    "Architecture"
+  );
+  $naCategories["alternative & integrative medicine"] = array (
+    "Alternative Medicine"
+  );
+  $naCategories["conditions & treatments"] = array (
+    "Pharmacology"
+  );
+  $naCategories["fitness & exercise"] = array (
+    "Sports & Recreation"
+  );
+  $naCategories["food & nutrition"] = array (
+    "Diet & Nutrition"
+  );
+  $naCategories["healthcare self-management"] = array (
+    "Health Care"
+  );
+  $naCategories["mental health & well-being"] = array (
+    "Mental Health", 
+    "Psychology"
+  );
+  $naCategories["prevention & safety"] = array (
+    "Mental Health"
+  );
+  $naCategories["screening & diagnostics"] = array (); 
+  $naCategories["money & security"] = array (
+    "Personal Finance", 
+    "Business & Economy"
+  );
+  $naCategories["banking"] = array ();
+  $naCategories["consumer rights & protections"] = array ();
+  $naCategories["credit, mortgages & loans"] = array ();
+  $naCategories["estate planning"] = array ();
+  $naCategories["fraud & scams"] = array ();
+  $naCategories["health, life & property insurance"] = array ();
+  $naCategories["long-term care planning"] = array ();
+  $naCategories["medicare & medicaid"] = array ();
+  $naCategories["planning & budgeting"] = array ();
+  $naCategories["real estate"] = array ();
+  $naCategories["retirement planning"] = array ();
+  $naCategories["saving & investing"] = array ();
+  $naCategories["social security"] = array ();
+  $naCategories["spending"] = array ();
+  $naCategories["taxes"] = array ();
+  $naCategories["work & purpose"] = array (
+    "Career"
+  );
+  $naCategories["career growth & education"] = array ();
+  $naCategories["finding a job"] = array ();
+  $naCategories["launching a business"] = array ();
+  $naCategories["starting a new career"] = array ();
+  $naCategories["volunteering & service"] = array ();
+  $naCategories["work transitions"] = array ();
+  $naCategories["work/life balance"] = array ();
+  $naCategories["living & learning"] = array (
+    "Arts & Literature", 
+    "Spirituality & Religion", 
+    "Religion", 
+    "Science & Technology", 
+    "Celebrities", 
+    "Internet", 
+    "TV & Radio", 
+    "Home Improvement", 
+    "Gardening", 
+    "Travel", 
+    "Cinema", 
+    "Culture", 
+    "Comedy", 
+    "Dance", 
+    "Drama", 
+    "Music", 
+    "Opera", 
+    "Spoken Word", 
+    "Theatre", 
+    "Home & How-To", 
+    "Performing Arts", 
+    "Technology", 
+    "Crafts", 
+    "Arts & Crafts", 
+    "Design", 
+    "Arts & Entertainment", 
+    "Instructional", 
+    "Poetry", 
+    "Drawing & Painting", 
+    "Fiction", 
+    "Mixed Media", 
+    "Modern", 
+    "Nonfiction", 
+    "Photography", 
+    "Sculpture", 
+    "Writing", 
+    "Actors & Directors", 
+    "Animation", 
+    "Behind the Scenes", 
+    "Food & Dining", 
+    "Cooking", 
+    "Hobbies & Collecting", 
+    "Holidays & Seasonal", 
+    "Identity", 
+    "Online"
+  );
+  $naCategories["arts & entertainment"] = array (
+    "Comedy", 
+    "Dance", 
+    "Drama", 
+    "Music", 
+    "Opera", 
+    "Spoken Word", 
+    "Theatre", 
+    "Celebrities", 
+    "Poetry", 
+    "Drawing & Painting", 
+    "TV & Radio", 
+    "Fiction", 
+    "Mixed Media", 
+    "Modern", 
+    "Nonfiction", 
+    "Photography", 
+    "Sculpture", 
+    "Writing", 
+    "Actors & Directors", 
+    "Animation", 
+    "Behind the Scenes", 
+    "Arts & Entertainment"
+  );
+  $naCategories["cooking"] = array (
+    "Cooking"
+  );
+  $naCategories["family & relationships"] = array ();
+  $naCategories["home & garden"] = array (
+    "Crafts", 
+    "Design", 
+    "Arts & Crafts", 
+    "Cooking",
+    "Gardening", 
+    "Home Improvement"
+  );
+  $naCategories["next avenue classroom"] = array (
+    "Instructional"
+  );
+  $naCategories["reinvention & inspiration"] = array ();
+  $naCategories["spirituality"] = array (
+    "Spirituality & Religion", 
+    "Religion"
+  );
+  $naCategories["style"] = array ();
+  $naCategories["technology"] = array (
+    "Technology", 
+    "Digital", 
+    "Online", 
+    "Science & Technology", 
+    "Internet"
+  );
+  $naCategories["travel"] = array(
+    "Travel", 
+    "Food & Dining"
+  );
+  $naCategories["caregiving"] = array();
+  $naCategories["aging in place"] = array();
+  $naCategories["caregiver support"] = array();
+  $naCategories["end-of-life care"] = array();
+  $naCategories["financial & legal matters"] = array();
+  $naCategories["finding & selecting care"] = array();
+  $naCategories["giving care"] = array();
+  $naCategories["services & resources"] = array();
+  $naCategories["types & costs of care"] = array();
+  
+  
+  // Check the DB to see if a record exists for "Aging", our base category
+  $sql = "
+    SELECT
+      video_portal_dataset_id,
+      topic,
+      data,
+      created
+    FROM
+      video_portal_dataset
+    WHERE
+      topic = '%s'";
+
+  $result = db_query($sql, "aging");
+
+  $topicData = array();
+
+  while ($row = db_fetch_object($result)) {
+    $topicData[] = $row;
+  }
+
+  // Init our video container
+  $topicVideos = (object) array();
+  $coveAgingVideoArray = array();
+  
+  // If 24 hours has not transpired since the record was created use the record in the DB for the video data
+  if ((($topicData[0]->created)+(24*60*60)) > time()) {
+    // Unserialize the data from the record in the DB
+    $topicVideos = unserialize(base64_decode($topicData[0]->data));
+    $coveAgingVideoArray =  $topicVideos;
+    return TRUE;
+  } else {
+    // Call the API to get the category id of "Aging" our base category
+    $url = "http://api.pbs.org/cove/v1/categories/?filter_name=Aging";
+    $data = video_api_callCoveAPI($url);
+    
+    // Make sure that the API returns a proper result
+    if ($data) {
+      // Store the category id
+      $coveAgingCategoryId = $data->results[0]->id;
+      // Once we have obtained the category id pull all videos from COVE for that category
+      $params = "";
+      $params .= "fields=associated_images,mediafiles,categories";
+      $params .= "&filter_categories__id__in=".$coveAgingCategoryId;
+      $params .= "&filter_availability_status=Available";
+      $params .= "&filter_type=Episode";
+
+      $url = "http://api.pbs.org/cove/v1/videos/?".$params;
+
+      $topicVideos = video_api_callCoveAPI($url);
+      
+      if ($topicVideos !== FALSE) {
+        // TODO: Figure out a mechanic for grabbing more than 200 results from the API
+        // Store the Aging category result as a record in the database
+        // Create a UNIX timestamp for the current time
+        $timeStamp = time();
+        // Map the geoLocation and other data to the data object for insertion into the DB
+        $data = (object) array();
+        $data->topic = "aging";
+        $data->data = base64_encode(serialize($topicVideos->results));
+        $data->created = $timeStamp;
+
+        // Insert the record into the DB
+        $result = drupal_write_record("video_portal_dataset", $data);
+        // Add information to $coveAgingVideoArray
+        $coveAgingVideoArray = $topicVideos->results;
+        
+        if ($result) {
+          return TRUE;
+        }
+      } else {
+        return FALSE;
+      }
+    } else {
+      return FALSE;
+    }
+  }
+}
+
+/**
+ * video_api_getViewByName method
+ * Get view by name
+ * Arguments are sent as an array
+ *
+ * @param str $name The name of the view
+ * @param arr	$arguments The arguments sent to the view
+ * @param int $limit The amount of items you want returned in the view
+ *
+ * @return array The array of data returned by the view
+ */
+function video_api_getViewByName ($name, $args=array(), $limit=0) {
+	// Get the view by name
+	$view = array();
+	$view = views_get_view($name);
+	// Show all results
+	$view->set_items_per_page($limit);
+	// Send the arguments to the view
+	$view->set_arguments($args);
+	// Execute the view
+	$view->execute();
+	
+	return $view;
+}
+
+/* ------ Callback Functions ------ */
+
+/**
+ * video_api_get_node method
+ * Returns a json object of a node object in drupal
+ * 
+ * @param int $nid The node id
+ *
+ * @return json The node object determined by node id
+ */
+function video_api_get_node($nid) {
+	// Check if the user has permissions to access this node
+	$access = user_access("access ajax callbacks");
+
+	if ($access) {
+		// If access is granted process the node and return it
+		$node = node_load($nid, null, true);
+		drupal_json(array("status" => 0, "data" => $node));
+	} else {
+		// otherwise, return the access denied message
+		echo "You do not have access to this ajax method.";
+	}
+}
+
+/**
+ * video_api_get_video method
+ * 
+ * Checks to see if a record for the topic exists and pulls it from the DB.
+ * If no record exists for the given topic, or if 24 hours has transpired since the record was created,
+ * the function then constructs the internal and cove videos for the given Next Avenue topic and it's COVE mapping.
+ * It then pulls all of the video information together into a single array.
+ * This array is then serialized and placed into Next Avenue's DB.
+ * This array is then returned via a JSON object to the caller of the request.
+ * 
+ * @return json A JSON object of videos assigned to the topic
+ */
+function video_api_get_video () {
+  // The next avenue topic we are searching for videos with
+  $topic = (string) $_GET["topic"];
+  // The current page of the result set
+  $page = (int) $_GET["page"];
+  $numVideosPerPage = (int) 15;
+  
+  // Make sure a topic was sent
+  if ($topic === "") {
+    return FALSE;
+  } else {
+    // Put the topic back to its former state
+    $topic = html_entity_decode($topic);
+    
+    // Check the DB to see if a record exists for the Next Avenue Topic
+    $sql = "
+      SELECT
+        video_portal_dataset_id,
+        topic,
+        data,
+        created
+      FROM
+        video_portal_dataset
+      WHERE
+        topic LIKE '%s'";
+    
+    $result = db_query($sql, $topic);
+       
+    $topicData = array();
+    
+    while ($row = db_fetch_object($result)) {
+      $topicData[] = $row;
+    }
+    
+    // Init our video container
+    $topicVideos = array();
+    
+    // If 24 hours has not transpired since the record was created use the record in the DB for the video data
+    if ((($topicData[0]->created)+(24*60*60)) > time()) {
+      // Unserialize the data from the record in the DB
+      $topicVideos = unserialize(base64_decode($topicData[0]->data));
+      // Skip to pagination and JSON
+    } else {
+      // If a record exists in the DB, but the created date is past 24 hours
+      // delete the record and create a new one
+      if ($topicData) {
+        $sql = "
+          DELETE FROM
+            video_portal_dataset
+          WHERE
+            topic = '%s'";
+        
+        $result = db_query($sql, $topicData[0]->topic);
+      }
+      
+      // If no record exists, get all video by the taxonomy ids for the channel/topic
+      // Get the taxonomy id for the term
+      $termIds = video_api_getTaxonomyTermIdsByNodeTitle ($topic);
+                  
+      // Init our internal video container and place all internal videos into the container
+      $internalVideos = array();
+      $internalVideos = video_api_getViewByName("all_videos_by_topic_ids", array($termIds[0]));
+      
+      // Place our internal videos into our video container
+      foreach ($internalVideos->result as $item) {
+        // Load the node into an object
+        $node = (object) array();
+        $node = node_load($item->nid);
+        
+        $arrayKey = "";
+        $arrayKey = strval($item->nid);
+        
+        // Place the node information for the video into the array
+        $topicVideos[$arrayKey]->nid = $node->nid;
+        $topicVideos[$arrayKey]->url = "";
+        $topicVideos[$arrayKey]->img = $node->field_slideshow_image[0]['filepath'];
+        $topicVideos[$arrayKey]->description = video_api_convertSmartQuotes($node->field_summary[0]['value']);
+        $topicVideos[$arrayKey]->title = video_api_convertSmartQuotes($node->title);
+      }
+      
+      // Place the aliased url for each of the videos into $topicVideos
+      foreach ($topicVideos as $k => $v) {
+        $topicVideos[$k]->url = url("node/".$v->nid);
+      }
+            
+      // Generate the categories for external videos
+      $result = FALSE;
+      $result = video_api_generateVideoCategories();
+      
+      global $naCategories;
+      global $coveAgingVideoArray;
+      
+      // If the result of generating the categories for COVE is false, something is amiss with the API
+      // we then stop all activities dealing with the COVE API
+      if ($result) {
+        // Find the mapping of COVE categories for $topic from $naCategories
+        $coveCategoryMappings = array();
+        $coveCategoryMappings = $naCategories[$topic];
+        $coveVideos = array();        
+        
+        // TODO: Optimize this! This hunk of crap is slow!
+        if ($coveCategoryMappings) {
+          foreach ($coveCategoryMappings as $category) {
+            foreach ($coveAgingVideoArray as $video) {
+              foreach ($video->categories as $videoCategory) {
+                if ($category === $videoCategory->name) {
+
+                  $arrayKey = strval($video->tp_media_object_id);
+
+                  if ($arrayKey !== "") {
+
+                    if (array_key_exists($arrayKey, $topicVideos)) {
+                      // Do not insert the video into the array
+                    } else {
+                      // Place the video information from the COVE API into the array
+                      $coveVideos[$arrayKey]->tp_media_object_id = $video->tp_media_object_id;
+                      $coveVideos[$arrayKey]->title = video_api_convertSmartQuotes($video->title);
+                      $coveVideos[$arrayKey]->description = video_api_convertSmartQuotes($video->short_description);
+                      $coveVideos[$arrayKey]->img = $video->associated_images[0]->url;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+       
+        foreach ($coveVideos as $item) {
+          $topicVideos[] = $item;
+        }
+        
+      } else {
+        // COVE API did not respond
+      }
+      // Once the object is constructed, serialize the information and place it into the DB
+      // Create a UNIX timestamp for the current time
+      $timeStamp = time();
+      // Map the geoLocation and other data to the data object for insertion into the DB
+      $data = (object) array();
+      $data->topic = $topic;
+      $data->data = base64_encode(serialize($topicVideos));
+      $data->created = $timeStamp;
+
+      // Insert the record into the DB
+      $result = drupal_write_record("video_portal_dataset", $data);
+    }
+    
+    // Paginate the result set based on the parameters sent
+    // Adjust $start for 0 based arrays
+    $page = $page - 1;
+    $start = (int) $numVideosPerPage * $page;
+    
+    $package = array ();
+    $package[]["count"] = count($topicVideos);
+    $package[]["videos"] = array_splice($topicVideos, $start, $numVideosPerPage);
+    
+    // Convert the PHP object to JSON and return JSON to the caller of the request
+    $json = json_encode($package);
+    echo $json;
+  }
+}
+
+/* ------ Admin Menu Pages ------ */
+
+/**
+ * Create the admin page form which allows editors to clear the cache
+ *
+ * Description of what the form does and a submit button
+ */
+function video_api_admin() {
+  $description = "";
+  $description .= '<p>For performance, the content of the video portal is stored in a cache table. The content is regenerated only if the rows in the cache table are missing.</p>';
+  $description .= '<p>To delete the video portal cache and rebuild the content, click this button. This is useful if you have recently created new content or promoted new video content.</p>';
+  $description .= '<p>If you want to clear everything from the cache, use the <a href="/admin/settings/performance">Performance Settings page</a></p>';
+    
+  $form['clear_description'] = array (
+    '#title' => 'Clear',
+    '#value' => $description,
+  );
+
+  $form['submit'] = array (
+    '#type' => 'submit',
+    '#value' => 'Clear the Video Portal Cache',
+  );
+    
+  return ($form);
+}
+
+/**
+ * Action for submit
+ * 1. Truncate the video_portal_dataset table
+ * 2. Alert the user that the Video Portal cache has been cleared
+ */
+function video_api_admin_submit() {
+  $sql = "TRUNCATE TABLE video_portal_dataset";
+  db_query($sql);
+  
+  drupal_set_message('The video portal cache has been cleared.');
+}

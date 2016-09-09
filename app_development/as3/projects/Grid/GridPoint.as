@@ -1,0 +1,1 @@
+﻿package {		public class GridPoint {		private var _x:Number;		private var _y:Number;		private var _num:Number;		public function GridPoint(xt:Number, yt:Number, d:Number) {			_x = xt;			_y = yt;			_num = d;		}				public function get x():Number { return _x }		public function get y():Number { return _y }	}}

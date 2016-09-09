@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<glossary>
+  <term>
+    <term_name>
+      <![CDATA[Condenser]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The condenser is a focusing lens with an adjustable aperture (iris) located directly underneath the stage of an optical microscope. The condenser focuses a cone of light from the illuminator onto the slide. It adjusts this cone to work best with each different lens.<p><img src="assets/xml/glossary/images/condenser.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Eyepiece]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The microscope lens assembly that is closest to your eye is called the eyepiece. Eyepieces contain two or sometimes more lenses. The binocular microscope has two eyepieces, one for each eye.<p><img src="assets/xml/glossary/images/eyepiece.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>The distance between the eyepieces can be adjusted to match the distance between your pupils. The focus of each eyepiece can be adjusted to compensate for slight differences in the vision of each of your eyes.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Illuminator]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The illuminator is a lamp that projects light onto a specimen. Illuminators may project light from beneath the specimen (transmission) or on top of the specimen (reflection).  The binocular microscope uses transmitted illumination and the digital hand-held microscope uses reflected illumination.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Magnification]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The magnification of a microscope tells you the number of times that the image you see is larger than the actual specimen you are observing.<p><img src="assets/xml/glossary/images/magnification.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>Typical optical microscopes use pairs of lens assemblies to provide magnification of up to 1000 times. Dissecting microscopes have much smaller magnifications, typically from 5 to 20 times. Electron microscopes (which use beams of electrons instead of beams of light) can provide magnification up to 1,000,000 times. To find the magnification of a microscope, multiply the magnification of the eyepiece by the magnification of the objective you are using. For instance, a 10X eyepiece and a 40X objective will provide a total magnification of 400X.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Objective]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The microscope lens assembly that is closest to the specimen is called the objective. The binocular microscope on this bench has three objectives – a 4X, a 10X, and a 40X. Objective lenses typically have short working distances and must be placed close to the specimen to be examined.<p><img src="assets/xml/glossary/images/objective.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Optical Microscope]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>An optical microscope consists of a tube that contains two lens assemblies. One, called the objective, is placed close to a brightly lit specimen. It produces a magnified image located within the tube.<p><img src="assets/xml/glossary/images/optical_microscope.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>The second assembly, called the eyepiece, magnifies the image in the tube further.  Objectives and eyepieces are rated by magnifying power.  To find the overall power of the microscope, multiply the power of the objective by the power of the eyepiece.  For instance, a 40X objective and a 10X eyepiece provide an overall optical magnification of 400.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Resolution]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The resolution of a microscope refers to the size of the tiniest detail that the microscope can transmit clearly. Resolution is measured by the distance between the closest points that can be seen as separated. The resolution of this binocular microscope is [TBD].</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Reticle]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>A reticle is a set of fine lines located below the eyepiece in a microscope or in a telescope. The name reticle comes from the Latin reticulum, which means a little net.<p><img src="assets/xml/glossary/images/reticle.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>The optical reticle was invented by the English scientist Robert Hooke. The reticle is placed below the eyepiece just where the objective lens focuses the image of the specimen. Thus the eyepiece magnifies the reticle scale and the specimen image together.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Specimen]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>A specimen is a sample of a natural object. Tiny specimens are often mounted on glass slides for observation with a microscope.<p><img src="assets/xml/glossary/images/specimen.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Stage]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>The stage is the part of an optical microscope that holds the slide or specimen that you want to examine. Light to illuminate the specimen usually comes up through a hole in the stage.<p><img src="assets/xml/glossary/images/stage.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Digital Microscope]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>A digital microscope is a type of optical microscope that contains a set of lenses that project an image of the specimen directly on a charge-coupled device (CCD) camera chip.<p><img src="assets/xml/glossary/images/ccd_microscope.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>Digital microscopes are designed for use with a monitor and have no optics for the human eye. The magnification depends on the size and setting of the monitor. Digital microscopes typically contain a ring of bright LED lamps to illuminate specimens from the top.</p>]]>
+    </description>
+  </term>
+  <term>
+    <term_name>
+      <![CDATA[Microscopy]]>
+    </term_name>
+    <description>
+      <![CDATA[<p>One of the first microscopists was the Dutch tradesman and scientist Anthony van Leeuwenhoek, 1632-1723.<p><img src="assets/xml/glossary/images/microscopy.png" hspace="0" vspace="0" /></p></p>]]>
+    </description>
+    <description>
+      <![CDATA[<p>He built hand-held microscopes and was the first to observe tiny one-celled creatures living in rain barrels, which he called animalcules. He sent letters and drawings of his findings to the Royal Society in London. They were initially met with skepticism, but after sending a delegation to Delft to see the creatures, the society published his letters in their journal and elected him a fellow. High quality specimens Leeuwenhoek sent to the Royal Society still survive in its collections.</p>]]>
+    </description>
+  </term>
+</glossary>

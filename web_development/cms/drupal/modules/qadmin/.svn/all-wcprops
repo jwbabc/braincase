@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/sciencebuzz_web/!svn/ver/2348/trunk/www/sites/all/modules/custom/qadmin
+END
+qadmin.info
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/sciencebuzz_web/!svn/ver/1842/trunk/www/sites/all/modules/custom/qadmin/qadmin.info
+END
+qadmin.module
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/sciencebuzz_web/!svn/ver/2348/trunk/www/sites/all/modules/custom/qadmin/qadmin.module
+END
+qadmin.install
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/sciencebuzz_web/!svn/ver/2204/trunk/www/sites/all/modules/custom/qadmin/qadmin.install
+END

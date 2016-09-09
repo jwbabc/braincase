@@ -1,0 +1,78 @@
+<?php
+function hot_topics_schema () {
+  $schema['hot_topics_fql_data'] = array(
+    'description' => t('fql data for the hot topics module'),
+    'fields' => array(
+      'hot_topics_fql_data_id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'nid' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'url' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'like_count' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'total_count' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'share_count' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'click_count' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'created' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('hot_topics_fql_data_id'),
+    'mysql_suffix' => "ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='fql data for the hot topics module' AUTO_INCREMENT=1"
+  );
+  
+  return $schema;
+}
+
+function hot_topics_install () {
+  // Add the table used by the module
+  switch ($GLOBALS['db_type']) {
+    case 'mysql':
+    case 'mysqli':
+      drupal_install_schema('hot_topics');
+      break;
+  }
+}
+
+function hot_topics_uninstall () {
+  // Remove the table used by the module
+  drupal_uninstall_schema('hot_topics');
+  
+  cache_clear_all('*', 'cache', TRUE);
+  cache_clear_all('*', 'cache_filter', TRUE);
+  cache_clear_all('*', 'cache_menu', TRUE);
+  cache_clear_all('*', 'cache_page', TRUE);
+}

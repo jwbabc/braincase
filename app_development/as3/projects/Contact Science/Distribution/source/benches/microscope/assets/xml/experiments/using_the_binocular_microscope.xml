@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Using the binocular microscope</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Turn the video switch to “Binocular Microscope.”</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htubm_01.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htubm_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Turn the nose ring above the objective lenses so the short “finder” lens with the red line (4 X) is in front and clicks into place pointing down at the microscope stage.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htubm_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htubm_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Choose a prepared slide from the specimen tray and place it between the clips on the stage of the binocular microscope.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htubm_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htubm_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Use the inner and outer knobs underneath the right rear corner of the stage to move the slide until it is centered underneath the microscope objective.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htubm_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htubm_06.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Once you can see the specimen, turn the big coarse focusing knob and the smaller fine focusing knob at the back of the microscope until the specimen on the slide is clearly in focus.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htubm_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htubm_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>If the image is too dark or too bright, adjust the light dimmer wheel at the base of the scope on the left side.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htubm_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[htubm_05.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What’s going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>The binocular microscope uses two sets of lenses to magnify a specimen. The lenses closest to your eyes are called eyepieces. The lenses above the microscope stage (where you place the specimen) are called objectives. There are also lenses to focus light from the light source in the base of the microscope onto the specimen.<br /><br />Light travels from the light source, through the specimen, into the objective, through the microscope tube, into the eyepieces, and into your eyes. The microscope focuses the image of the specimen on the retina at the back of your eye.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[htubm_08.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[binocular.png]]>
+  </activity>
+</experiment>

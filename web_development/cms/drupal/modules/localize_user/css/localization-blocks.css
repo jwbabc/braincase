@@ -1,0 +1,39 @@
+div#localization-block { height: 100%; width: 100%; position: relative; }
+div#localization-block #affiliates { height: 94px; float: right; width: 100%; }
+div#localization-block #img-container { position: relative; top: 24%; float: right; }
+div#localization-block #img-container img { padding: 0 16px; }
+div#localization-block #pbs-container { position: relative; top: 30%; float: right; }
+div#localization-block #pbs-container img { padding: 0 14px 0 16px; border-left: 1px solid; }
+
+/* -- Around Town -- */
+div#block-localize_user-1 { border-bottom: thick solid #666666; margin-top: 17px; line-height: 18px; min-height: 215px;  }
+div#block-localize_user-1 div.content h4 { height: 55px; }
+div#block-localize_user-1 div.content h4 a { color: #c70850 !important; font-family: Arial,Helvetica,sans-serif !important; font-size: 1em !important; font-weight: bolder !important; line-height: 18px !important; text-transform: uppercase !important; }
+div#block-localize_user-1 div.content h4 a p { color: #c70850 !important; }
+div#block-localize_user-1 img { float: right; }
+div#block-localize_user-1 p.local-hub-copy { line-height: 22px; padding: 12px 0 18px; }
+div#block-localize_user-1 .stations { background-color:#639182; color:#fff; font-size:15px; line-height: 22px; margin: 0 0 12px; font-weight:bold; width: 100%; bottom:5px; text-align:center; padding: 5px 0; }
+div#block-localize_user-1 .stations a { color:#fff }
+div#block-localize_user-1 .stations a:hover { color:#fff !important; }
+
+/* -- Choose your affiliate dialog box -- */
+div.affiliate-dialog-header p { color: #fff; padding: 0 0 12px; }
+div.affiliate-dialog-content { background-color: #fff;
+  -moz-border-bottom-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -khtml-border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -moz-border-bottom-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -khtml-border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px; }
+div.affiliate-dialog-content p { color: #fff; }
+div.affiliate-logo-container { width: 95%; margin: 0px auto; }
+div.affiliate-dialog-content div.affiliate-logo-container div.affiliate-logo { float: left; padding: 8px; text-align: center; }
+div.affiliate-dialog-content div.affiliate-logo-container div.affiliate-logo a img { height: 70px; }
+div.affiliate-dialog-content div.affiliate-logo-container div.affiliate-logo p { color: #000; }
+
+div.affiliate-dialog-footer { padding: 20px; text-align: center; }
+div.affiliate-dialog-footer p { font-weight: bold; width: 60%; color: #000000; margin: 0 auto; padding: 12px 0; }
+div.affiliate-dialog-footer div.stations { background-color: #639182; bottom: 5px; color: #FFFFFF; font-size: 15px; font-weight: bold; line-height: 22px; margin: 0 auto; padding: 5px 0; text-align: center; width: 85%; }
+div.affiliate-dialog-footer div.stations a { color: #fff; }

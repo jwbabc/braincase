@@ -1,0 +1,8 @@
+<?php
+  // Sets the default value for profile module fields in the User Registration form
+  function registration_defaults_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id === 'user_register') {
+      // Set the default value for the site newsletter subscription checkbox to "checked"
+      $form['Subscriptions']['newsletter_site']['#default_value'] = TRUE;
+    }
+  }

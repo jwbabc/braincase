@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>The Finger and the Fan</p>]]>
+  </title>  
+  <step>
+    <text>
+      <![CDATA[<p>Connect the lamp bulb block and the DC motor block to the DC power supply like this. Notice that the fan turns but the lamp does not light. Put your finger on the fan to stop it from turning. Keep your eyes on the lamp! Why does the light bulb light when you stop the fan?  Only one of these theories is correct!<br /><br />Theory 1:<br />The motor uses a lot of current while it is running. When the motor is working to spin the fan, it uses up all the electricity and there is not enough left to light the light bulb. When you put your finger on the fan, the motor uses less current, and there is enough left to light the bulb.<br /><br />Theory 2:<br />The motor uses hardly any current while it is running. Since there is hardly any current flowing through the circuit, the light bulb does not light.  When you put your finger on the fan, the motor uses more current to try and keep running. More current in the circuit lights the light bulb.<br /><br />Check your theory:<br />Look at the current meter on the power supply: How much current flows when the fan is spinning? How much current flows when you stop the fan?</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[]]> 
+    </mp3>
+    <video>
+      <![CDATA[dcfaf_01.png]]> 
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[]]>
+    </header>
+    <text>
+      <![CDATA[]]>
+    </text>
+    <mp3>
+      <![CDATA[]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[]]>
+  </activity>
+</experiment>

@@ -1,0 +1,7 @@
+name = "Localize User"
+description = "Localize the user to his/her station based on a Zip Code/IP pair."
+package = Custom
+
+version = "6.x-1.0"
+core = "6.x"
+project = "Next Avenue"

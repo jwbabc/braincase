@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<experiment>
+  <title>
+    <![CDATA[<p>Project your hand</p>]]>
+  </title>
+  <step>
+    <text>
+      <![CDATA[<p>Position the lamp backward - push the handle, like this...</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[pyh_02.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ph_01.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>If the lamp is dim, push the button until the lamp is bright.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[pyh_03.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ph_02.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Medium Focal Length Lens on the bench in Zone 1.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[pyh_04.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ph_03.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Position the Screen on the bench in Zone 2.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[pyh_05.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ph_04.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Place your hand in front of the lamp like this...</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[pyh_06.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ph_05.flv]]>
+    </video>
+  </step>
+  <step>
+    <text>
+      <![CDATA[<p>Slide the lens back and forth until your hand is in focus. Make sure your hand is up close to the light.</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[pyh_07.mp3]]>
+    </mp3>
+    <video>
+      <![CDATA[ph_06.flv]]>
+    </video>
+  </step>
+  <explanation>
+    <header>
+      <![CDATA[<p>What is going on?</p>]]>
+    </header>
+    <text>
+      <![CDATA[<p>Did you notice the orientation of the image? Is it upside down? What other differences do you see? An image produced by a single convex lens will be upside down AND backwards. Trace the light rays and you can see how this works. The light from the top part of your hand is refracted downward to the focal point and forms an image of the upper part of your hand. Light from the lower part of your hand is refracted upward to the focal point, forming an image higher up. The left and right sides are flipped in the same way. The result is an upside down and backward image!</p>]]>
+    </text>
+    <mp3>
+      <![CDATA[pyh_08.mp3]]>
+    </mp3>
+  </explanation>
+  <activity>
+    <![CDATA[1lens.swf]]>
+  </activity>
+</experiment>
