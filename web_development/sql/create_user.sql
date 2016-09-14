@@ -18,3 +18,6 @@ REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'ip';
 REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'ip';
 # Always do this after chaning permissions
 FLUSH PRIVILEGES;
+
+# A more locked down version for external projects
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON databasename.* TO 'username'@'localhost' IDENTIFIED BY 'password';
