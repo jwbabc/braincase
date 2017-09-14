@@ -1,0 +1,9 @@
+name = ISA Search
+description = Contains a page and block with an autocomplete search tool for contacts within the ISA CRM.
+
+core = 7.x
+package = ISA Custom Modules
+
+configure = admin/config/system/isa-search
+
+files[] = includes/isa_search.blocks.inc

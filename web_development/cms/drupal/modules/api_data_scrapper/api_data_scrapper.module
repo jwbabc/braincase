@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Implements hook_menu()
+ */
+function api_data_scrapper_menu(){
+  
+  $items = [];
+  
+  $items['admin/config/system/api_data_scrapper'] = [
+    'title' => 'API Data Scrapper',
+    'description' => 'Builds CSV files using external APIs',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('api_data_scrapper_build_form'),
+    'access arguments' => ['administer api data scrapper'],
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'api_data_scrapper.build.inc',
+    'file path' => drupal_get_path('module','api_data_scrapper') . '/includes/forms',
+  ];
+  
+  $items['admin/config/system/api_data_scrapper/build'] = [
+    'title' => t('Build CSV'),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -1,
+  ];
+  
+  $items['admin/config/system/api_data_scrapper/settings'] = [
+    'title' => 'Settings',
+    'description' => 'Configuration Page for the API Data Scrapper',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('api_data_scrapper_form'),
+    'access arguments' => ['administer api data scrapper'],
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'api_data_scrapper.admin.inc',
+    'file path' => drupal_get_path('module','api_data_scrapper') . '/includes/forms',
+  ];
+  
+  return $items;
+}
+
+/**
+ * Implements hook_permission()
+ */
+function api_data_scrapper_permission() {
+  return [
+    'administer api data scrapper' => [
+      'title' => t('Administer API Data Scrapper'),
+      'description' => t('Administer the API Data Scrapper')
+    ],
+  ];
+}

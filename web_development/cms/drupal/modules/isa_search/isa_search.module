@@ -1,0 +1,177 @@
+<?php
+
+/**
+ * Implements hook_menu()
+ */
+function isa_search_menu(){
+  
+  $items = array();
+  
+  $items['admin/config/system/isa-search'] = array(
+    'title' => 'ISA Search',
+    'description' => 'Configuration page for the ISA Search module',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('isa_search_settings_form'),
+    'access arguments' => array('administer isa search'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'isa_search.settings.form.inc',
+    'file path' => drupal_get_path('module','isa_search') . '/includes/forms',
+);
+  
+  $items['isa-search'] = array(
+    'title' => 'ISA Search Form',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('isa_search_form'),
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'isa_search.form.inc',
+    'file path' => drupal_get_path('module','isa_search') . '/includes/forms',
+  );
+  
+  $items['isa-search/ajax/search'] = array(
+    'page callback' => 'isa_search_autocomplete',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  
+  return $items;
+}
+
+/**
+ * Implements hook_permission()
+ */
+function isa_search_permission() {
+  return array(
+    'administer isa search' => array(
+      'title' => t('Administer ISA Search'),
+      'description' => t('Administer the ISA Search')
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_info()
+ */
+function isa_search_block_info() {
+  
+  $blocks['isa_search_block'] = array(
+    'info' => t('ISA Search Block'),
+    'region' => BLOCK_REGION_NONE,
+    'status' => TRUE,
+    'weight' => 0,
+    'cache' => DRUPAL_NO_CACHE
+  );
+  
+  return $blocks;
+}
+ 
+/**
+ * Implements hook_block_view
+ */
+function isa_search_block_view($delta = '') {
+  
+  $blocks = array();
+  
+  switch($delta) {
+    case 'isa_search_block':
+      $blocks['subject'] = '';
+      $blocks['content'] = isa_search_block_content();
+      
+      drupal_add_css(drupal_get_path('module', 'isa_search') . '/includes/css/isa_search.css');
+      drupal_add_js(drupal_get_path('module', 'isa_search') . '/includes/js/isa_search.js');
+      
+      break;
+  }
+  
+  return $blocks;
+}
+
+/**
+ * Output search block content
+ * 
+ * @return string
+ */
+function isa_search_block_content() {
+  
+  $output = '
+    <div id="isa-slideout">
+        <div class="isa-slideout-toggle-container">
+          <div class="isa-search-container">
+            <div>
+              <h2>Search</h2>
+              <form class="isa-search" onsubmit="return false;">
+                <input type="text" id="isa-search-text" autocomplete="off" value="" placeholder="'.t('Enter contact name').'">
+              </form>
+            </div>
+            <div class="isa-slideout-ajax-results">
+            </div>
+          </div>
+        </div>
+        <div class="isa-slideout-toggle">
+          <div class="toggle-label rotate">Contacts</div>
+        </div>
+    </div>';
+  
+  return $output;
+}
+
+/**
+ * Matches text agaist the query string and returns a JSON object of results
+ * 
+ * @param type $queryStr The string of text to match
+ */
+function isa_search_autocomplete() {
+  
+  if (isset($_REQUEST['query']) && !empty($_REQUEST['query'])) {
+    $searchQuery = filter_input(INPUT_POST, 'query', FILTER_SANITIZE_STRING);
+  } else {
+    $searchQuery = '';
+  }
+  
+  $success = false;
+  $numResults = 4;
+  $output = null;
+  
+  if (strlen($searchQuery) > 3) {
+    
+    $results = node_search_execute($searchQuery);
+    
+    if (!empty($results)) {
+
+      $success = true;
+      
+      for($i = 0; $i <= $numResults; $i++) {
+        
+        // Construct the output based on the returned matching nodes, if a result exists
+        if (isset($results[$i], $results[$i]['node'])) {
+        
+          $output .= '<div class="contact-container ajax-content-selector" data-title="'.$results[$i]['node']->title.'">';
+          
+          // Output the name of the contact if it exists
+          if (isset($results[$i]['node']->title)) {
+            $output .= '<div class="contact-name"><img class="contact-name-img" src="/'.drupal_get_path('module', 'isa_search').'/includes/images/contact.png'.'" alt="Contact Name Image" /><a href="'.$results[$i]['link'].'" title="'.$results[$i]['node']->title.'" target="_blank">'.$results[$i]['node']->title.'</a></div>';
+          }
+          
+          // Output the email address of the contact if it exists
+          if (isset($results[$i]['node']->field_email_address['und'][0]['safe_value'])) {
+            $output .= '<div class="contact-email"><img class="contact-email-img" src="/'.drupal_get_path('module', 'isa_search').'/includes/images/email.png'.'" alt="Contact Email Image" /><a href="mailto:'.$results[$i]['node']->field_email_address['und'][0]['safe_value'].'">'.$results[$i]['node']->field_email_address['und'][0]['safe_value'].'</a></div>';
+          }
+          
+          // Output the phone number of the contact if it exists
+          if (isset($results[$i]['node']->field_phone_number_work['und'][0]['safe_value'])) {
+            $output .= '<div class="contact-phone"><img class="contact-phone-img" src="/'.drupal_get_path('module', 'isa_search').'/includes/images/phone.png'.'" alt="Contact Phone Image" /><a href="tel:+'.$results[$i]['node']->field_phone_number_work['und'][0]['safe_value'].'">'.$results[$i]['node']->field_phone_number_work['und'][0]['safe_value'].'</a></div>';
+          }
+          
+          $output .= '</div>';
+        
+        }
+        
+      }
+    }
+  }
+
+  echo json_encode(array('success' => $success, 'content' => $output));
+
+  module_invoke_all('exit');
+  exit;
+}
