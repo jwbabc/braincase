@@ -1,0 +1,236 @@
+/*******************/
+/*! GLOBAL STYLES !*/
+/*******************/
+.wt-rotator .thumbnails > ul > li,
+.wt-rotator .buttons > div  {
+  cursor: pointer;
+}
+
+ul.mdash-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 1em;
+  color: #FFFFFF !important;
+  display: block;
+  z-index: 2000;
+}
+
+ul.mdash-list li {
+  font-size: 12px;
+  line-height: 14px;
+  position: relative;
+  top: -5px;
+}
+
+ul.mdash-list li .mdash-icon {
+  position: absolute;
+  left: -10px;
+}
+
+.clear {
+  clear: both;
+}
+
+/***********************/
+/*! AD DEFAULT STYLES !*/
+/***********************/
+
+/* Ad Pre-Header */
+.ad-h2-preheader {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 9px;
+  background-color: #A0968C;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px 3px 15px !important;
+  position: relative;
+  width: 80px;
+  text-align: left !important;
+  left: -15px;
+}
+
+/* Ad Location Containers */
+.ad-date-location-container,
+.ad-date-location-container * {
+  box-sizing: border-box;
+}
+
+.ad-date-location-container,
+.ad-date-location-left,
+.ad-date-location-middle,
+.ad-date-location-right {
+  display: inline-block;
+  float: left;
+}
+
+.ad-date-location-container {
+  width: 557px;
+  height: 50px;
+  border-bottom: 1px solid #c9c8c8;
+  color: #ff9100;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.ad-date-location-left {
+  width: 146px;
+  height: 50px;
+}
+
+.ad-date-location-middle {
+  padding-top: 15px;
+  padding-left: 27px;
+  width: 209px;
+  height: 50px;
+  border-left: 1px solid #c9c8c8;
+}
+
+.ad-date-location-right {
+  padding-top: 15px;
+  padding-left: 27px;
+  width: 202px;
+  height: 50px;
+  border-left: 1px solid #c9c8c8;
+}
+
+span.ad-date-text,
+span.ad-location-text {
+  display: inline-block;
+  vertical-align: text-bottom;
+  line-height: 18px;
+}
+
+img.ad-date-icon,
+img.ad-location-icon {
+  padding-right: 10px;
+}
+
+/* Ad Header */
+.ad-h1-header {
+  font-family: Arial, Helvetica, sans-serif;
+  /*
+  font-size:22px;
+  line-height:24px;
+  font-weight:bold;
+  margin:0 0 35px 0;
+  padding:0;
+  text-transform:uppercase;
+  */
+}
+
+/* Ad Body */
+.ad-body1,
+.ad-body2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ad Button */
+.ad-button-url1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.ad-button-url2 {
+  background: url(../images/icons/btn.gif) no-repeat scroll left top transparent;
+  display: block;
+  height: 14px;
+  padding: 3px 0;
+  text-align: center;
+  width: 90px;
+}
+
+.ad-button-url3 {
+  background: url(../images/icons/btn_learn_more.gif);
+  background-size: 100% !important;
+  -webkit-background-size: 100% !important;
+  -moz-background-size: 100% !important;
+  -o-background-size: 100% !important;
+  background-repeat: no-repeat;
+  width: 125px;
+  display: block;
+  height: 14px;
+  padding: 3px 0;
+  text-align: center;
+  font-size: 12px !important;
+}
+
+/* Ad Logo and Logo Image */
+.ad-logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.ad-logo img.ad-logo-image {
+  padding: 8px 28px 8px 0;
+}
+
+/**************************/
+/*! RIGHT SIDEBAR STYLES !*/
+/**************************/
+
+#custom_table {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+td#banner-right-col {
+  background-color: #none;
+  padding: 0;
+  vertical-align: top;
+  width: 184px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+td#banner-right-col a.right-col-block {
+  display: block;
+  width: 184px;
+  height: 104px;
+  text-decoration: none;
+}
+
+td#banner-right-col a.right-col-block img {
+  border: none;
+  width: 176px;
+}
+
+td#banner-right-col ul#middle_img_link {
+  list-style-image: url(../images/icons/arrow.jpg);
+  border: 2px solid #E4E4E4;
+  margin-top: 7px;
+  margin-bottom: 8px;
+  padding: 10px 0 5px 24px;
+  width: 148px;
+}
+
+td#banner-right-col ul#middle_img_link a {
+  color: #ff9100;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+td#banner-right-col ul#middle_img_link a:hover {
+  text-decoration: underline;
+}
+
+td#banner-right-col ul#middle_img_link li {
+  margin: 0 0 4px;
+  padding: 0;
+  color: #ff9100;
+  font-size: 13px;
+  line-height: 13px;
+}

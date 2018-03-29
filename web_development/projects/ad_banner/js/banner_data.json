@@ -1,0 +1,79 @@
+var bannerAdData = [
+  {
+    "pre_header_text"      : "LIVE WEBCAST",
+    "date_location_left"   : "",
+    "date_location_middle" : "",
+    "date_location_right"  : "",
+    "header_text"          : "Positive Steps to Increase<br />Gender Diversity and<br />Eliminate Bias in<br />the Legal Profession",
+    "body_text_1"          : "Learn how implicit biases hold firms back<br />from achieving diversity and economic goals.",
+    "body_text_2"          : "",
+    "link_text"            : "ENROLL TODAY",
+    "link_url"             : "http://westlegaledcenter.com/program_guide/course_detail.jsf?courseId=100159629"
+  },
+  {
+    "pre_header_text"      : "LIVE WEBCAST",
+    "date_location_left"   : "",
+    "date_location_middle" : "",
+    "date_location_right"  : "",
+    "header_text"          : "JUMPSTART YOUR<br />LEGAL CAREER IN 2018",
+    "body_text_1"          : "",
+    "body_text_2"          : "",
+    "link_text"            : "ENROLL TODAY",
+    "link_url"             : "http://westlegaledcenter.com/program_guide/course_detail.jsf?courseId=100191052"
+  },
+  {
+    "pre_header_text"      : "LIVE WEBCAST",
+    "date_location_left"   : "",
+    "date_location_middle" : "",
+    "date_location_right"  : "",
+    "header_text"          : "What it Takes to Frustrate the<br />Hacker Knocking at Your Door",
+    "body_text_1"          : "",
+    "body_text_2"          : "",
+    "link_text"            : "ENROLL TODAY",
+    "link_url"             : "http://westlegaledcenter.com/program_guide/course_detail.jsf?courseId=100177542"
+  },
+  {
+    "pre_header_text"      : "LIVE WEBCAST",
+    "date_location_left"   : "",
+    "date_location_middle" : "",
+    "date_location_right"  : "",
+    "header_text"          : "INVESTMENT MANAGEMENT<br />ROUNDTABLE: DECEMBER 2017",
+    "body_text_1"          : "Join the conversation on a national stage for candid,<br />interactive discussion of what’s happening now in the<br />investment management world.",
+    "body_text_2"          : "",
+    "link_text"            : "ENROLL TODAY",
+    "link_url"             : "http://westlegaledcenter.com/program_guide/course_detail.jsf?courseId=100175736"
+  },
+  {
+    "pre_header_text"      : "LIVE WEBCAST",
+    "date_location_left"   : "",
+    "date_location_middle" : "",
+    "date_location_right"  : "",
+    "header_text"          : "What Made Muhammad Ali<br />Great . . . and Legal Ethics",
+    "body_text_1"          : "Learn how Ali’s approach to his craft is reflected in the<br />rules of professional conduct that guide legal ethics.",
+    "body_text_2"          : "",
+    "link_text"            : "ENROLL TODAY",
+    "link_url"             : "http://westlegaledcenter.com/program_guide/course_detail.jsf?courseId=100163131"
+  },
+  {
+    "pre_header_text"      : "",
+    "date_location_left"   : "",
+    "date_location_middle" : "",
+    "date_location_right"  : "",
+    "header_text"          : "MEET YOUR<br />DECEMBER 31 CLE<br />DEADLINE QUICKLY<br />AND EASILY.",
+    "body_text_1"          : "Find the programs you need, including those <br />offering hard-to-find specialty credits.",
+    "body_text_2"          : "",
+    "link_text"            : "BROWSE PROGRAMS",
+    "link_url"             : "http://westlegaledcenter.com/search/advancedCLESearchCriteriaForm.jsf?applicationSection=3"
+  },
+  {
+    "pre_header_text"      : "",
+    "date_location_left"   : "",
+    "date_location_middle" : "",
+    "date_location_right"  : "",
+    "header_text"          : "Discover<br />West LegalEdcenter",
+    "body_text_1"          : "",
+    "body_text_2"          : "Your one-stop resource for all your professional development needs.",
+    "link_text"            : "Get a Complimentary Course",
+    "link_url"             : "http://westlegaledcenter.com/prm/prmJSFNoNav.jsf?id=96312046&sc_cid=TryWLEC"
+  }
+]
